@@ -18,7 +18,9 @@ if not (sys.version_info.major == 3 and sys.version_info.minor >= 12):
 
 
 with open('autoinit.toml', 'rb') as f:
-    DATA = tomllib.load(f)
+    DATA: dict = tomllib.load(f)
+    LIBS: list[str, ...] = DATA['libraries']
+    APPS: list[dict, ...] = DATA['applications']
 
 DOWNLOAD = './Download/'
 
@@ -26,19 +28,19 @@ DOWNLOAD = './Download/'
 def main():
     # parse command
     parser = argparse.ArgumentParser(prog="autoinit", description="Python3 script for automating initialize the system environment.")
-    parser.add_argument("action", type=str, help="Action", choices=['lib', 'pkg', 'all'])
-    parser.add_argument("name", type=str, help="Python library name or software package name", nargs='?', default='')
+    parser.add_argument("action", type=str, help="Action", choices=['lib', 'app', 'all'])
+    parser.add_argument("name", type=str, help="Python library name or application name", nargs='?', default='')
     args = parser.parse_args()
 
     global COLOR_START, COLOR_INFO, COLOR_FINISH, COLOR_ERROR
     COLOR_START, COLOR_INFO, COLOR_FINISH, COLOR_ERROR = '', '', '', ''
 
     print("Start upgrade pip tools.")
-    lib(['pip', 'setuptools', 'wheel'])
+    install_lib(['pip', 'setuptools', 'wheel'])
     print("Finish upgrade pip tools.")
 
     print("Start dynamically load third-party libraries.")
-    lib(['colorama', 'requests', 'tqdm'])
+    install_lib(['colorama', 'requests', 'tqdm'])
     global colorama, requests, tqdm
     colorama = importlib.import_module('colorama')
     requests = importlib.import_module('requests')
@@ -59,7 +61,7 @@ def main():
         exit(-1)
     print(COLOR_FINISH + "OK.")
 
-    print(COLOR_START + "Creating download folder...")
+    print(COLOR_START + "Checking download folder...")
     if not os.path.exists(DOWNLOAD):
         os.mkdir(DOWNLOAD)
         print(COLOR_INFO + f"Created: {DOWNLOAD}")
@@ -67,58 +69,53 @@ def main():
 
     # process command
     if args.action == 'lib':
-        lib(DATA['libraries'] if args.name == '' else [args.name])
-    elif args.action == 'pkg':
-        pkg(DATA['softwares'] if args.name == '' else list(filter(lambda pkg: pkg['name'].lower() == args.name.lower(), DATA['softwares'])))
+        install_lib(LIBS if args.name == '' else [args.name])
+    elif args.action == 'app':
+        install_app(APPS if args.name == '' else list(filter(lambda app: app['name'].lower() == args.name.lower(), APPS)))
     else:
-        lib(DATA['libraries'])
-        pkg(DATA['softwares'])
+        install_lib(LIBS)
+        install_app(APPS)
 
 
-def lib(libs: list[str, ...]):
+def install_lib(libs: list[str, ...]):
     print(COLOR_START + f"Start install/upgrade libraries: {', '.join(libs)}")
     os.system(f'python -m pip install --upgrade --index-url https://pypi.tuna.tsinghua.edu.cn/simple {' '.join(libs)}')
     os.system('python -m pip cache purge')
     print(COLOR_FINISH + f"Finish install/upgrade libraries: {', '.join(libs)}")
 
 
-def pkg(pkgs: list[dict, ...]):
-    for i, software in zip(range(len(pkgs)), pkgs):
+def install_app(apps: list[dict, ...]):
+    for i, app in zip(range(len(apps)), apps):
+        print(COLOR_START + f"({i + 1}/{len(apps)}) Start download/install {app['name']}...")
 
-        print(COLOR_START + f"({i + 1}/{len(pkgs)}) Start download/install {software['name']}...")
-
-        match software['method']:
+        match app['method']:
             case 'automatic':
-                download(software)
+                install(app)
             case 'manual':
-                webbrowser.open(software['download_link'])
-                input(COLOR_INFO + f"Please download and install {software['name']} manually.")
+                webbrowser.open(app['download_link'])
+                input(COLOR_INFO + f"Please download and install {app['name']} manually.")
             case 'winget':
-                print(COLOR_INFO + f"Installing {software['name']} using winget...")
-                os.system('winget install ' + software['id'])
-                print(COLOR_INFO + f"Installed {software['name']} using winget.")
+                print(COLOR_INFO + f"Installing {app['name']} using winget...")
+                os.system('winget install ' + app['id'])
+                print(COLOR_INFO + f"Installed {app['name']} using winget.")
             case _:
                 print(COLOR_ERROR + "Error: Wrong method.")
 
-        print(COLOR_FINISH + f"Finish download/install {software['name']}.\n")
+        print(COLOR_FINISH + f"Finish download/install {app['name']}.\n")
 
 
-def download(software: dict):
-    print(COLOR_INFO + f"Downloading {software['name']}...")
-    file_name = software['download_url'].split('/')[-1]
-    response = requests.get(software['download_url'], stream=True)
+def install(app: dict):
+    print(COLOR_INFO + f"Installing {app['name']}...")
+    file_name = app['download_url'].split('/')[-1]
+    response = requests.get(app['download_url'], stream=True)
     length = int(response.headers.get('content-length', 0))
     with open(DOWNLOAD + file_name, 'wb') as fo, tqdm.tqdm(desc=file_name, total=length, unit='iB', unit_scale=True, unit_divisor=1024) as bar:
         for data in response.iter_content(chunk_size=1024):
             size = fo.write(data)
             bar.update(size)
-    print(COLOR_INFO + f"Downloaded {software['name']}.")
-
-    print(COLOR_INFO + f"Installing {software['name']}...")
-    file_name = software['download_url'].split('/')[-1]
-    os.system(f'PowerShell {DOWNLOAD + file_name} {software['install_args']}')
+    os.system(f'PowerShell {DOWNLOAD + file_name} {app['install_args']}')
     input(COLOR_INFO + "Wait for the installation to complete.")
-    print(COLOR_INFO + f"Installed {software['name']}.")
+    print(COLOR_INFO + f"Installed {app['name']}.")
 
 
 if __name__ == '__main__':

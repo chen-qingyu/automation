@@ -29,7 +29,8 @@ COLOR_FINISH = colorama.Fore.GREEN + colorama.Style.BRIGHT
 COLOR_ERROR = colorama.Fore.RED + colorama.Style.BRIGHT
 
 with open('autogit.toml', 'rb') as f:
-    REPOS = tomllib.load(f)['repos']
+    DATA: dict = tomllib.load(f)
+    REPOS: list[dict, ...] = DATA['repos']
     REPOS.sort(key=lambda repo: os.path.getmtime(repo['path']) if os.path.exists(repo['path']) else 0, reverse=True)
 
 
