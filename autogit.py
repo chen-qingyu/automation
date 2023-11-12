@@ -22,12 +22,12 @@ except ModuleNotFoundError:
     import colorama
 
 colorama.init(autoreset=True)
-
 COLOR_START = colorama.Fore.BLUE + colorama.Style.BRIGHT
 COLOR_INFO = colorama.Fore.CYAN + colorama.Style.BRIGHT
 COLOR_FINISH = colorama.Fore.GREEN + colorama.Style.BRIGHT
 COLOR_ERROR = colorama.Fore.RED + colorama.Style.BRIGHT
 
+# read data
 with open('autogit.toml', 'rb') as f:
     DATA: dict = tomllib.load(f)
     REPOS: list[dict, ...] = DATA['repos']

@@ -16,13 +16,11 @@ if not (sys.version_info.major == 3 and sys.version_info.minor >= 12):
     print("Require at least Python >= 3.12")
     exit(1)
 
-
+# read data
 with open('autoinit.toml', 'rb') as f:
     DATA: dict = tomllib.load(f)
     LIBS: list[str, ...] = DATA['libraries']
     APPS: list[dict, ...] = DATA['applications']
-
-DOWNLOAD = './Download/'
 
 
 def main():
@@ -32,40 +30,27 @@ def main():
     parser.add_argument("name", type=str, help="Python library name or application name", nargs='?', default='')
     args = parser.parse_args()
 
+    print("Start dynamically load third-party libraries.")
     global COLOR_START, COLOR_INFO, COLOR_FINISH, COLOR_ERROR
     COLOR_START, COLOR_INFO, COLOR_FINISH, COLOR_ERROR = '', '', '', ''
 
-    print("Start upgrade pip tools.")
     install_lib(['pip', 'setuptools', 'wheel'])
-    print("Finish upgrade pip tools.")
-
-    print("Start dynamically load third-party libraries.")
     install_lib(['colorama', 'requests', 'tqdm'])
     global colorama, requests, tqdm
     colorama = importlib.import_module('colorama')
     requests = importlib.import_module('requests')
     tqdm = importlib.import_module('tqdm')
-    print("Finish dynamically load third-party libraries.")
 
-    print("Start colorize.")
     colorama.init(autoreset=True)
     COLOR_START = colorama.Fore.BLUE + colorama.Style.BRIGHT
     COLOR_INFO = colorama.Fore.CYAN + colorama.Style.BRIGHT
     COLOR_FINISH = colorama.Fore.GREEN + colorama.Style.BRIGHT
     COLOR_ERROR = colorama.Fore.RED + colorama.Style.BRIGHT
-    print(COLOR_FINISH + "Finish colorize.")
+    print(COLOR_FINISH + "Finish dynamically load third-party libraries.")
 
-    print(COLOR_START + "Checking platform...")
     if platform.system() != 'Windows':
         print(COLOR_ERROR + "This script currently only supports the Windows platform.\n")
         exit(-1)
-    print(COLOR_FINISH + "OK.")
-
-    print(COLOR_START + "Checking download folder...")
-    if not os.path.exists(DOWNLOAD):
-        os.mkdir(DOWNLOAD)
-        print(COLOR_INFO + f"Created: {DOWNLOAD}")
-    print(COLOR_FINISH + "OK.")
 
     # process command
     if args.action == 'lib':
@@ -84,13 +69,21 @@ def install_lib(libs: list[str, ...]):
     print(COLOR_FINISH + f"Finish install/upgrade libraries: {', '.join(libs)}")
 
 
-def install_app(apps: list[dict, ...]):
+def install_app(apps: list[dict, ...], download_dir: str = f'C:/Users/{os.getlogin()}/Downloads/'):
     for i, app in zip(range(len(apps)), apps):
         print(COLOR_START + f"({i + 1}/{len(apps)}) Start download/install {app['name']}...")
 
         match app['method']:
             case 'automatic':
-                install(app)
+                file_name = app['download_url'].split('/')[-1]
+                response = requests.get(app['download_url'], stream=True)
+                length = int(response.headers.get('content-length', 0))
+                with open(download_dir + file_name, 'wb') as fo, tqdm.tqdm(desc=file_name, total=length, unit='iB', unit_scale=True, unit_divisor=1024) as bar:
+                    for data in response.iter_content(chunk_size=1024):
+                        size = fo.write(data)
+                        bar.update(size)
+                os.system(f'PowerShell {download_dir + file_name} {app['install_args']}')
+                input(COLOR_INFO + "Wait for the installation to complete.")
             case 'manual':
                 webbrowser.open(app['download_link'])
                 input(COLOR_INFO + f"Please download and install {app['name']} manually.")
@@ -102,20 +95,6 @@ def install_app(apps: list[dict, ...]):
                 print(COLOR_ERROR + "Error: Wrong method.")
 
         print(COLOR_FINISH + f"Finish download/install {app['name']}.\n")
-
-
-def install(app: dict):
-    print(COLOR_INFO + f"Installing {app['name']}...")
-    file_name = app['download_url'].split('/')[-1]
-    response = requests.get(app['download_url'], stream=True)
-    length = int(response.headers.get('content-length', 0))
-    with open(DOWNLOAD + file_name, 'wb') as fo, tqdm.tqdm(desc=file_name, total=length, unit='iB', unit_scale=True, unit_divisor=1024) as bar:
-        for data in response.iter_content(chunk_size=1024):
-            size = fo.write(data)
-            bar.update(size)
-    os.system(f'PowerShell {DOWNLOAD + file_name} {app['install_args']}')
-    input(COLOR_INFO + "Wait for the installation to complete.")
-    print(COLOR_INFO + f"Installed {app['name']}.")
 
 
 if __name__ == '__main__':
