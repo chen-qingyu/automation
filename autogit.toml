@@ -5,6 +5,13 @@
 # upstream: the upstream remote repository host.
 
 [[repos]]
+name = 'Automation'
+abbr = 'auto'
+local = 'D:/'
+remote = { github = 'https://github.com/chen-qingyu/Automation.git', gitee = 'https://gitee.com/ChobitsY/automation.git' }
+upstream = 'github'
+
+[[repos]]
 name = 'HelloWorld'
 abbr = 'HW'
 local = 'D:/Projects/'
