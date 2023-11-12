@@ -52,21 +52,10 @@ def main():
     parser.add_argument("name", type=str, help="Abbreviation of repository name", nargs='?', default='')
     args = parser.parse_args()
 
-    options = {'clean': '-d -f -x', 'remote': '--verbose', 'gc': '--aggressive'}
-    if args.action == 'clone':
-        clone(args.name.lower())
-    else:
-        process(args.name.lower(), args.action, options.get(args.action, ''))
+    process_command(args.action, args.name.lower())
 
 
-def exist_path(path) -> bool:
-    if not os.path.exists(path):
-        print(COLOR_ERROR + f"{path} not exists.")
-        return False
-    return True
-
-
-def process(repo_abbr: str, command: str, option: str):
+def process_command(command: str, repo_abbr: str):
     print(COLOR_START + f"Start {command}.")
 
     for i, repo in zip(range(SIZE), DATA['repos']):
@@ -76,39 +65,30 @@ def process(repo_abbr: str, command: str, option: str):
         root = repo['local'] + repo['name']
         print(COLOR_INFO + f"({i + 1}/{SIZE}) {command} {root}:")
 
-        if not exist_path(root):
-            continue
+        if command == 'clone':
+            if os.path.exists(root):
+                print(COLOR_INFO + f"{root} already exists.")
+                continue
 
-        os.chdir(root)
-        os.system(f'git {command} {option}')
+            if not os.path.exists(repo['local']):
+                os.mkdir(repo['local'])
+            os.chdir(repo['local'])
+            os.system(f'git clone {repo['remote'][repo['upstream']]} "{repo['name']}"')
+            os.chdir(repo['name'])
+            for host, url in repo['remote'].items():
+                if host != repo['upstream']:
+                    os.system(f'git remote set-url --add origin {url}')
+
+        else:
+            if not os.path.exists(root):
+                print(COLOR_ERROR + f"{root} not exists.")
+                continue
+
+            os.chdir(root)
+            option = {'clean': '-d -f -x', 'remote': '--verbose', 'gc': '--aggressive'}.get(command, '')
+            os.system(f'git {command} {option}')
 
     print(COLOR_FINISH + f"Finish {command}.")
-
-
-def clone(name):
-    print(COLOR_START + "Start clone.")
-
-    for i, repo in zip(range(SIZE), DATA['repos']):
-        if name != '' and name != repo['abbr'].lower():
-            continue
-
-        root = repo['local'] + repo['name']
-        print(COLOR_INFO + f"({i + 1}/{SIZE}) Cloning {root}:")
-
-        if os.path.exists(root):
-            print(COLOR_INFO + f"{root} already exists.")
-            continue
-
-        if not os.path.exists(repo['local']):
-            os.mkdir(repo['local'])
-        os.chdir(repo['local'])
-        os.system(f'git clone {repo['remote'][repo['upstream']]} "{repo['name']}"')
-        os.chdir(repo['name'])
-        for host, url in repo['remote'].items():
-            if host != repo['upstream']:
-                os.system(f'git remote set-url --add origin {url}')
-
-    print(COLOR_FINISH + "Finish clone.")
 
 
 if __name__ == '__main__':
