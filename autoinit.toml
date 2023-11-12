@@ -94,12 +94,6 @@ method = 'manual'
 site = 'https://code.visualstudio.com/'
 
 [[applications]]
-name = 'Perl'
-method = 'manual'
-site = 'https://strawberryperl.com/'
-# include GNU Compiler Collection and CMake
-
-[[applications]]
 name = 'Visual Studio Community'
 method = 'manual'
 site = 'https://visualstudio.microsoft.com/downloads/'
@@ -108,3 +102,20 @@ site = 'https://visualstudio.microsoft.com/downloads/'
 name = 'GNU Octave'
 method = 'manual'
 site = 'https://octave.org/download#ms-windows'
+
+[[applications]]
+name = 'CMake'
+method = 'winget'
+id = 'Kitware.CMake'
+
+[[applications]]
+name = 'Doxygen'
+method = 'manual'
+site = 'https://www.doxygen.nl/download.html#srcbin'
+
+# must appear after CMake and Doxygen because PATH order
+[[applications]]
+# include GNU Compiler Collection
+name = 'Perl'
+method = 'manual'
+site = 'https://strawberryperl.com/'
