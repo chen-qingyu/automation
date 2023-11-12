@@ -1,0 +1,85 @@
+# List of environment configurations
+
+# Python third-party libraries that need to be installed/upgraded
+libraries = [
+    'numpy',
+    'scipy',
+    'sympy',
+
+    'matplotlib',
+    'pillow',     # PIL
+
+    'pyinstaller',
+    'pygame',
+    'pyautogui',
+    'pyserial',    # serial
+
+    # 'wordcloud',
+    # 'jieba',
+
+    'requests',
+    'beautifulsoup4', # bs4
+
+    'opencv-python', # cv2, name conflicts with easyocr's dep: opencv-python-headless
+
+    # 'tensorflow', # the latest version conflicts with numpy
+
+    'jupyter',
+
+    'autopep8',
+
+    'colorama',
+
+    # 'PySide6',
+    'PyQt6',
+
+    'graph-tools',
+
+    'objprint',
+    'viztracer',
+
+    'django',
+    'djlint',
+
+    'git-archive-all',
+
+    'tqdm',
+]
+
+# Softwares that need to be installed
+
+# name: the name of the software package
+# method: one of ['automatic', 'manual', 'winget']
+# - automatic: automatically download and try automatic installation
+#   - download_url: the URL download the file directly
+#   - install_args: install arguments
+# - manual: manual download and installation
+#   - download_link: the download link at which the browser opens
+# - winget: download and install using winget
+#   - id: the ID of the software package in winget
+
+[[softwares]]
+name = 'Qt'
+method = 'automatic'
+download_url = 'https://mirror.nju.edu.cn/qt/official_releases/online_installers/qt-unified-windows-x64-online.exe'
+install_args = '--mirror https://mirror.nju.edu.cn/qt'
+
+[[softwares]]
+name = 'Sublime Text'
+method = 'manual'
+download_link = 'https://www.sublimetext.com/download_thanks?target=win-x64'
+
+[[softwares]]
+name = 'Bandizip'
+method = 'manual'
+download_link = 'https://www.bandisoft.com/bandizip/dl.php?web'
+
+[[softwares]]
+name = 'Android Studio'
+method = 'manual'
+download_link = 'https://developer.android.com/studio'
+
+[[softwares]]
+name = 'Git'
+method = 'winget'
+id = 'Git.Git'
