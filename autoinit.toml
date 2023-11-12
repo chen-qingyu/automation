@@ -77,3 +77,34 @@ site = 'https://developer.android.com/studio'
 name = 'Git'
 method = 'winget'
 id = 'Git.Git'
+
+[[applications]]
+name = 'Sourcetrail'
+method = 'manual'
+site = 'https://github.com/CoatiSoftware/Sourcetrail/releases'
+
+[[applications]]
+name = 'Blender'
+method = 'manual'
+site = 'https://www.blender.org/download/'
+
+[[applications]]
+name = 'Visual Studio Code'
+method = 'manual'
+site = 'https://code.visualstudio.com/'
+
+[[applications]]
+name = 'Perl'
+method = 'manual'
+site = 'https://strawberryperl.com/'
+# include GNU Compiler Collection and CMake
+
+[[applications]]
+name = 'Visual Studio Community'
+method = 'manual'
+site = 'https://visualstudio.microsoft.com/downloads/'
+
+[[applications]]
+name = 'GNU Octave'
+method = 'manual'
+site = 'https://octave.org/download#ms-windows'
