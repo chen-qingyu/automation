@@ -8,6 +8,7 @@ libraries = [
 
     'matplotlib',
     'pillow',     # PIL
+    # 'jupyter',
 
     'pyinstaller',
     'pygame',
@@ -21,29 +22,22 @@ libraries = [
     'beautifulsoup4', # bs4
 
     'opencv-python', # cv2, name conflicts with easyocr's dep: opencv-python-headless
-
     # 'tensorflow', # the latest version conflicts with numpy
 
-    'jupyter',
-
     'autopep8',
+    'ipython',
 
     'colorama',
+    'tqdm',
 
-    # 'PySide6',
-    'PyQt6',
+    'PySide6',
 
     'graph-tools',
-
     'objprint',
     'viztracer',
 
     'django',
     'djlint',
-
-    'git-archive-all',
-
-    'tqdm',
 ]
 
 # Applications that need to be installed
@@ -51,33 +45,33 @@ libraries = [
 # name: the name of the application
 # method: one of ['automatic', 'manual', 'winget']
 # - automatic: automatically download and try automatic installation
-#   - download_url: the URL download the file directly
-#   - install_args: install arguments
+#   - url: the URL download the file directly
+#   - args: install arguments
 # - manual: manual download and installation
-#   - download_link: the download link at which the browser opens
+#   - site: the download site at which the browser opens
 # - winget: download and install using winget
 #   - id: the ID of the application in winget
 
 [[applications]]
 name = 'Qt'
 method = 'automatic'
-download_url = 'https://mirror.nju.edu.cn/qt/official_releases/online_installers/qt-unified-windows-x64-online.exe'
-install_args = '--mirror https://mirror.nju.edu.cn/qt'
+url = 'https://mirror.nju.edu.cn/qt/official_releases/online_installers/qt-unified-windows-x64-online.exe'
+args = '--mirror https://mirror.nju.edu.cn/qt'
 
 [[applications]]
 name = 'Sublime Text'
 method = 'manual'
-download_link = 'https://www.sublimetext.com/download_thanks?target=win-x64'
+site = 'https://www.sublimetext.com/'
 
 [[applications]]
 name = 'Bandizip'
 method = 'manual'
-download_link = 'https://www.bandisoft.com/bandizip/dl.php?web'
+site = 'https://www.bandisoft.com/bandizip/'
 
 [[applications]]
 name = 'Android Studio'
 method = 'manual'
-download_link = 'https://developer.android.com/studio'
+site = 'https://developer.android.com/studio'
 
 [[applications]]
 name = 'Git'

@@ -75,22 +75,20 @@ def install_app(apps: list[dict, ...], download_dir: str = f'C:/Users/{os.getlog
 
         match app['method']:
             case 'automatic':
-                file_name = app['download_url'].split('/')[-1]
-                response = requests.get(app['download_url'], stream=True)
+                file_name = app['url'].split('/')[-1]
+                response = requests.get(app['url'], stream=True)
                 length = int(response.headers.get('content-length', 0))
                 with open(download_dir + file_name, 'wb') as fo, tqdm.tqdm(desc=file_name, total=length, unit='iB', unit_scale=True, unit_divisor=1024) as bar:
                     for data in response.iter_content(chunk_size=1024):
                         size = fo.write(data)
                         bar.update(size)
-                os.system(f'PowerShell {download_dir + file_name} {app['install_args']}')
+                os.system(f'PowerShell {download_dir + file_name} {app['args']}')
                 input(COLOR_INFO + "Wait for the installation to complete.")
             case 'manual':
-                webbrowser.open(app['download_link'])
+                webbrowser.open(app['site'])
                 input(COLOR_INFO + f"Please download and install {app['name']} manually.")
             case 'winget':
-                print(COLOR_INFO + f"Installing {app['name']} using winget...")
                 os.system('winget install ' + app['id'])
-                print(COLOR_INFO + f"Installed {app['name']} using winget.")
             case _:
                 print(COLOR_ERROR + "Error: Wrong method.")
 
