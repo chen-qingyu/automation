@@ -29,9 +29,8 @@ COLOR_FINISH = colorama.Fore.GREEN + colorama.Style.BRIGHT
 COLOR_ERROR = colorama.Fore.RED + colorama.Style.BRIGHT
 
 with open('autogit.toml', 'rb') as f:
-    DATA = tomllib.load(f)
-    SIZE = len(DATA['repos'])
-    DATA['repos'].sort(key=lambda repo: os.path.getmtime(repo['local']+repo['name']) if os.path.exists(repo['local']+repo['name']) else 0, reverse=True)
+    REPOS = tomllib.load(f)['repos']
+    REPOS.sort(key=lambda repo: os.path.getmtime(repo['path']) if os.path.exists(repo['path']) else 0, reverse=True)
 
 
 def main():
@@ -48,43 +47,35 @@ def main():
     """
 
     parser = argparse.ArgumentParser(prog="autogit", description=help_text, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("action", type=str, help="Action of git operation", choices=['status', 'clone', 'push', 'pull', 'clean', 'remote', 'gc'])
-    parser.add_argument("name", type=str, help="Abbreviation of repository name", nargs='?', default='')
+    parser.add_argument("command", type=str, help="Git command", choices=['status', 'clone', 'push', 'pull', 'clean', 'remote', 'gc'])
     args = parser.parse_args()
 
-    process_command(args.action, args.name.lower())
+    process_command(args.command)
 
 
-def process_command(command: str, repo_abbr: str):
+def process_command(command: str):
     print(COLOR_START + f"Start {command}.")
 
-    for i, repo in zip(range(SIZE), DATA['repos']):
-        if repo_abbr != '' and repo_abbr != repo['abbr'].lower():
-            continue
-
-        root = repo['local'] + repo['name']
-        print(COLOR_INFO + f"({i + 1}/{SIZE}) {command} {root}:")
+    for i, repo in zip(range(len(REPOS)), REPOS):
+        print(COLOR_INFO + f"({i + 1}/{len(REPOS)}) {command} {repo['path']}:")
 
         if command == 'clone':
-            if os.path.exists(root):
-                print(COLOR_INFO + f"{root} already exists.")
+            if os.path.exists(repo['path']):
+                print(COLOR_INFO + f"{repo['path']} already exists.")
                 continue
 
-            if not os.path.exists(repo['local']):
-                os.mkdir(repo['local'])
-            os.chdir(repo['local'])
-            os.system(f'git clone {repo['remote'][repo['upstream']]} "{repo['name']}"')
-            os.chdir(repo['name'])
+            os.system(f'git clone {repo['remote'][repo['upstream']]} "{repo['path']}"')
+            os.chdir(repo['path'])
             for host, url in repo['remote'].items():
                 if host != repo['upstream']:
                     os.system(f'git remote set-url --add origin {url}')
 
         else:
-            if not os.path.exists(root):
-                print(COLOR_ERROR + f"{root} not exists.")
+            if not os.path.exists(repo['path']):
+                print(COLOR_ERROR + f"{repo['path']} not exists.")
                 continue
 
-            os.chdir(root)
+            os.chdir(repo['path'])
             option = {'clean': '-d -f -x', 'remote': '--verbose', 'gc': '--aggressive'}.get(command, '')
             os.system(f'git {command} {option}')
 

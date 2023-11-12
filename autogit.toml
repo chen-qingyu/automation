@@ -1,96 +1,68 @@
-# name: the repository name.
-# abbr: the abbreviation of repository name, no spaces, case insensitive.
-# local: the root path of the local repository.
+# path: the path of the local repository.
 # remote: remote repository addresses.
 # upstream: the upstream remote repository host.
 
 [[repos]]
-name = 'Automation'
-abbr = 'auto'
-local = 'D:/'
+path = 'D:/Automation'
 remote = { github = 'https://github.com/chen-qingyu/Automation.git', gitee = 'https://gitee.com/ChobitsY/automation.git' }
 upstream = 'github'
 
 [[repos]]
-name = 'HelloWorld'
-abbr = 'HW'
-local = 'D:/Projects/'
+path = 'D:/Projects/HelloWorld'
 remote = { github = 'https://github.com/chen-qingyu/HelloWorld.git', gitee = 'https://gitee.com/ChobitsY/HelloWorld.git' }
 upstream = 'github'
 
 [[repos]]
-name = 'HelloDataStructure'
-abbr = 'HDS'
-local = 'D:/Projects/'
+path = 'D:/Projects/HelloDataStructure'
 remote = { github = 'https://github.com/chen-qingyu/HelloDataStructure.git', gitee = 'https://gitee.com/ChobitsY/HelloDataStructure.git' }
 upstream = 'github'
 
 [[repos]]
-name = 'MyDataStructure'
-abbr = 'MDS'
-local = 'D:/Projects/'
+path = 'D:/Projects/MyDataStructure'
 remote = { github = 'https://github.com/chen-qingyu/MyDataStructure.git', gitee = 'https://gitee.com/ChobitsY/MyDataStructure.git' }
 upstream = 'github'
 
 [[repos]]
-name = 'MyLinearAlgebra'
-abbr = 'MLA'
-local = 'D:/Projects/'
+path = 'D:/Projects/MyLinearAlgebra'
 remote = { github = 'https://github.com/chen-qingyu/MyLinearAlgebra.git', gitee = 'https://gitee.com/ChobitsY/MyLinearAlgebra.git' }
 upstream = 'github'
 
 [[repos]]
-name = 'BadApple'
-abbr = 'BA'
-local = 'D:/Projects/'
+path = 'D:/Projects/BadApple'
 remote = { github = 'https://github.com/chen-qingyu/BadApple', gitee = 'https://gitee.com/ChobitsY/BadApple' }
 upstream = 'github'
 
 [[repos]]
-name = 'C Code'
-abbr = 'CC'
-local = 'D:/'
+path = 'D:/C Code'
 remote = { github = 'https://github.com/chen-qingyu/C-Code.git', gitee = 'https://gitee.com/ChobitsY/C-Code.git' }
 upstream = 'github'
 
 [[repos]]
-name = 'Python Code'
-abbr = 'PC'
-local = 'D:/'
+path = 'D:/Python Code'
 remote = { github = 'https://github.com/chen-qingyu/Python-Code.git', gitee = 'https://gitee.com/ChobitsY/Python-Code.git' }
 upstream = 'github'
 
 [[repos]]
-name = 'STM32 Code'
-abbr = 'SC'
-local = 'D:/'
+path = 'D:/STM32 Code'
 remote = { github = 'https://github.com/chen-qingyu/STM32-Code.git', gitee = 'https://gitee.com/ChobitsY/STM32-Code.git' }
 upstream = 'github'
 
 [[repos]]
-name = 'TeX Code'
-abbr = 'TC'
-local = 'D:/'
+path = 'D:/TeX Code'
 remote = { github = 'https://github.com/chen-qingyu/TeX-Code.git', gitee = 'https://gitee.com/ChobitsY/TeX-Code.git' }
 upstream = 'github'
 
 [[repos]]
-name = 'C Primer Plus'
-abbr = 'CPP'
-local = 'D:/Learn/'
+path = 'D:/Learn/C Primer Plus'
 remote = { github = 'https://github.com/chen-qingyu/C-Primer-Plus.git', gitee = 'https://gitee.com/ChobitsY/c-primer-plus.git' }
 upstream = 'github'
 
 [[repos]]
-name = 'OSTEP'
-abbr = 'OSTEP'
-local = 'D:/Learn/'
+path = 'D:/Learn/OSTEP'
 remote = { github = 'https://github.com/chen-qingyu/OSTEP.git', gitee = 'https://gitee.com/ChobitsY/ostep.git' }
 upstream = 'github'
 
 [[repos]]
-name = 'HtDP'
-abbr = 'HTDP'
-local = 'D:/Learn/'
+path = 'D:/Learn/HtDP'
 remote = { github = 'https://github.com/chen-qingyu/HtDP.git', gitee = 'https://gitee.com/ChobitsY/htdp.git' }
 upstream = 'github'
