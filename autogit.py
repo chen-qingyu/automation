@@ -52,7 +52,11 @@ def main():
     parser.add_argument("name", type=str, help="Abbreviation of repository name", nargs='?', default='')
     args = parser.parse_args()
 
-    eval(f'{args.action}(\'{args.name.lower()}\')')
+    options = {'clean': '-d -f -x', 'remote': '--verbose', 'gc': '--aggressive'}
+    if args.action == 'clone':
+        clone(args.name.lower())
+    else:
+        process(args.name.lower(), args.action, options.get(args.action, ''))
 
 
 def exist_path(path) -> bool:
@@ -62,23 +66,23 @@ def exist_path(path) -> bool:
     return True
 
 
-def status(name):
-    print(COLOR_START + "Start status.")
+def process(repo_abbr: str, command: str, option: str):
+    print(COLOR_START + f"Start {command}.")
 
     for i, repo in zip(range(SIZE), DATA['repos']):
-        if name != '' and name != repo['abbr'].lower():
+        if repo_abbr != '' and repo_abbr != repo['abbr'].lower():
             continue
 
         root = repo['local'] + repo['name']
-        print(COLOR_INFO + f"({i + 1}/{SIZE}) Checking {root}:")
+        print(COLOR_INFO + f"({i + 1}/{SIZE}) {command} {root}:")
 
         if not exist_path(root):
             continue
 
         os.chdir(root)
-        os.system('git status')
+        os.system(f'git {command} {option}')
 
-    print(COLOR_FINISH + "Finish status.")
+    print(COLOR_FINISH + f"Finish {command}.")
 
 
 def clone(name):
@@ -105,101 +109,6 @@ def clone(name):
                 os.system(f'git remote set-url --add origin {url}')
 
     print(COLOR_FINISH + "Finish clone.")
-
-
-def push(name):
-    print(COLOR_START + "Start push.")
-
-    for i, repo in zip(range(SIZE), DATA['repos']):
-        if name != '' and name != repo['abbr'].lower():
-            continue
-
-        root = repo['local'] + repo['name']
-        print(COLOR_INFO + f"({i + 1}/{SIZE}) Pushing {root}:")
-
-        if not exist_path(root):
-            continue
-
-        os.chdir(root)
-        os.system(f'git push')
-
-    print(COLOR_FINISH + "Finish push.")
-
-
-def pull(name):
-    print(COLOR_START + "Start pull.")
-
-    for i, repo in zip(range(SIZE), DATA['repos']):
-        if name != '' and name != repo['abbr'].lower():
-            continue
-
-        root = repo['local'] + repo['name']
-        print(COLOR_INFO + f"({i + 1}/{SIZE}) Pulling {root}:")
-
-        if not exist_path(root):
-            continue
-
-        os.chdir(root)
-        os.system(f'git pull')
-
-    print(COLOR_FINISH + "Finish pull.")
-
-
-def clean(name):
-    print(COLOR_START + "Start clean.")
-
-    for i, repo in zip(range(SIZE), DATA['repos']):
-        if name != '' and name != repo['abbr'].lower():
-            continue
-
-        root = repo['local'] + repo['name']
-        print(COLOR_INFO + f"({i + 1}/{SIZE}) Cleaning {root}:")
-
-        if not exist_path(root):
-            continue
-
-        os.chdir(root)
-        os.system('git clean -d -f -x')
-
-    print(COLOR_FINISH + "Finish clean.")
-
-
-def remote(name):
-    print(COLOR_START + "Start remote.")
-
-    for i, repo in zip(range(SIZE), DATA['repos']):
-        if name != '' and name != repo['abbr'].lower():
-            continue
-
-        root = repo['local'] + repo['name']
-        print(COLOR_INFO + f"({i + 1}/{SIZE}) Showing {root}:")
-
-        if not exist_path(root):
-            continue
-
-        os.chdir(root)
-        os.system('git remote --verbose')
-
-    print(COLOR_FINISH + "Finish remote.")
-
-
-def gc(name):
-    print(COLOR_START + "Start gc.")
-
-    for i, repo in zip(range(SIZE), DATA['repos']):
-        if name != '' and name != repo['abbr'].lower():
-            continue
-
-        root = repo['local'] + repo['name']
-        print(COLOR_INFO + f"({i + 1}/{SIZE}) Optimizing {root}:")
-
-        if not exist_path(root):
-            continue
-
-        os.chdir(root)
-        os.system('git gc --aggressive')
-
-    print(COLOR_FINISH + "Finish gc.")
 
 
 if __name__ == '__main__':
