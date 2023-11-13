@@ -60,18 +60,18 @@ args = '--mirror https://mirror.nju.edu.cn/qt'
 
 [[applications]]
 name = 'Sublime Text'
-method = 'manual'
-site = 'https://www.sublimetext.com/'
+method = 'winget'
+id = 'SublimeHQ.SublimeText.4'
 
 [[applications]]
 name = 'Bandizip'
-method = 'manual'
-site = 'https://www.bandisoft.com/bandizip/'
+method = 'winget'
+id = 'Bandisoft.Bandizip'
 
 [[applications]]
 name = 'Android Studio'
-method = 'manual'
-site = 'https://developer.android.com/studio'
+method = 'winget'
+id = 'Google.AndroidStudio'
 
 [[applications]]
 name = 'Git'
@@ -85,13 +85,13 @@ site = 'https://github.com/CoatiSoftware/Sourcetrail/releases'
 
 [[applications]]
 name = 'Blender'
-method = 'manual'
-site = 'https://www.blender.org/download/'
+method = 'winget'
+id = 'BlenderFoundation.Blender'
 
 [[applications]]
 name = 'Visual Studio Code'
-method = 'manual'
-site = 'https://code.visualstudio.com/'
+method = 'winget'
+id = 'Microsoft.VisualStudioCode'
 
 [[applications]]
 name = 'Visual Studio Community'
@@ -100,8 +100,8 @@ site = 'https://visualstudio.microsoft.com/downloads/'
 
 [[applications]]
 name = 'GNU Octave'
-method = 'manual'
-site = 'https://octave.org/download#ms-windows'
+method = 'winget'
+id = 'GNU.Octave'
 
 [[applications]]
 name = 'CMake'
@@ -110,12 +110,12 @@ id = 'Kitware.CMake'
 
 [[applications]]
 name = 'Doxygen'
-method = 'manual'
-site = 'https://www.doxygen.nl/download.html#srcbin'
+method = 'winget'
+id = 'DimitriVanHeesch.Doxygen'
 
 # must appear after CMake and Doxygen because PATH order
 [[applications]]
 # include GNU Compiler Collection
 name = 'Perl'
-method = 'manual'
-site = 'https://strawberryperl.com/'
+method = 'winget'
+id = 'StrawberryPerl.StrawberryPerl'

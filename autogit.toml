@@ -1,3 +1,5 @@
+# List of remote repositories
+
 # path: the path of the local repository.
 # remote: remote repository addresses.
 # upstream: the upstream remote repository host.
