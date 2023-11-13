@@ -85,11 +85,14 @@ def install_app(apps: list[dict, ...], download_dir: str = f'C:/Users/{os.getlog
                             bar.update(size)
                 os.system(f'{download_dir + file_name} {app['args']}')
                 input(COLOR_INFO + "Wait for the installation to complete.")
+
             case 'manual':
                 webbrowser.open(app['site'])
                 input(COLOR_INFO + f"Please download and install {app['name']} manually.")
+
             case 'winget':
                 os.system(f'winget install --id {app['id']}')
+
             case _:
                 print(COLOR_ERROR + "Error: Wrong method.")
 
