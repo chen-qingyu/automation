@@ -1,5 +1,6 @@
 # List of environment configurations
-# You may need mirror site: https://mirrors.ustc.edu.cn/
+# You may need to use `winget install --id Python.Python.3.12` first
+# You may need to use https://mirrors.ustc.edu.cn/ if something wrong with downloading
 
 # Python third-party libraries that need to be installed/upgraded
 libraries = [
