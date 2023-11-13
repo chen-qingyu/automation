@@ -1,4 +1,5 @@
 # List of environment configurations
+# You may need mirror site: https://mirrors.ustc.edu.cn/
 
 # Python third-party libraries that need to be installed/upgraded
 libraries = [
