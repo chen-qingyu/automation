@@ -1,8 +1,8 @@
-# List of environment configurations
-# You may need to use `winget install --id Python.Python.3.12` first
-# You may need to use https://mirrors.ustc.edu.cn/ if something wrong with downloading
+# List of environment configurations.
+# You may need to use `winget install --id Python.Python.3.12` first.
+# You may need to use https://mirrors.ustc.edu.cn/ if something wrong with downloading.
 
-# Python third-party libraries that need to be installed/upgraded
+# Python third-party libraries that need to be installed/upgraded.
 libraries = [
     'numpy',
     'scipy',
@@ -42,17 +42,17 @@ libraries = [
     'djlint',
 ]
 
-# Applications that need to be installed
-
-# name: the name of the application
-# method: one of ['automatic', 'manual', 'winget']
-# - automatic: automatically download and try automatic installation
-#   - url: the URL download the file directly
-#   - args: install arguments
-# - manual: manual download and installation
-#   - site: the download site at which the browser opens
-# - winget: download and install using winget
-#   - id: the ID of the application in winget
+# Applications that need to be installed.
+#
+# name: the name of the application.
+# method: one of ['automatic', 'manual', 'winget'].
+# - automatic: automatically download and try automatic installation.
+#   - url: the URL download the file directly.
+#   - args: install arguments.
+# - manual: manual download and installation.
+#   - site: the download site at which the browser opens.
+# - winget: download and install using winget.
+#   - id: the ID of the application in winget.
 
 [[applications]]
 name = 'Qt'
@@ -115,9 +115,9 @@ name = 'Doxygen'
 method = 'winget'
 id = 'DimitriVanHeesch.Doxygen'
 
-# must appear after CMake and Doxygen because PATH order
+# Must appear after CMake and Doxygen because PATH order.
 [[applications]]
-# include GNU Compiler Collection
+# Include GNU Compiler Collection.
 name = 'Perl'
 method = 'winget'
 id = 'StrawberryPerl.StrawberryPerl'
