@@ -44,15 +44,15 @@ libraries = [
 
 # Applications that need to be installed.
 #
-# name: the name of the application.
-# method: one of ['automatic', 'manual', 'winget'].
-# - automatic: automatically download and try automatic installation.
-#   - url: the URL download the file directly.
-#   - args: install arguments.
-# - manual: manual download and installation.
-#   - site: the download site at which the browser opens.
-# - winget: download and install using winget.
-#   - id: the ID of the application in winget.
+# name = the name of the application.
+# method = one of ['automatic', 'manual', 'winget'].
+# - automatic = automatically download and try automatic installation.
+#   - url = the URL download the file directly.
+#   - args = install arguments.
+# - manual = manual download and installation.
+#   - site = the download site at which the browser opens.
+# - winget = download and install using winget.
+#   - id = the ID of the application in winget.
 
 [[applications]]
 name = 'Qt'
