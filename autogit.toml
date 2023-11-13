@@ -1,8 +1,8 @@
 # List of remote repositories
 
-# path: the path of the local repository.
-# remote: remote repository addresses.
-# upstream: the upstream remote repository host.
+# path: the path of the local repository
+# remote: remote repository addresses
+# upstream: the upstream remote repository host
 
 [[repos]]
 path = 'D:/Automation'
