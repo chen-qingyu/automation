@@ -121,3 +121,8 @@ id = 'DimitriVanHeesch.Doxygen'
 name = 'Perl'
 method = 'winget'
 id = 'StrawberryPerl.StrawberryPerl'
+
+[[applications]]
+name = 'Oh My Posh'
+method = 'winget'
+id = 'JanDeDobbeleer.OhMyPosh'
