@@ -128,7 +128,7 @@ method = 'winget'
 id = 'JanDeDobbeleer.OhMyPosh'
 
 [[applications]]
-name = 'XMake'
+name = 'Xmake'
 method = 'winget'
 id = 'Xmake-io.Xmake'
 
@@ -136,3 +136,13 @@ id = 'Xmake-io.Xmake'
 name = 'CCleaner'
 method = 'winget'
 id = 'Piriform.CCleaner'
+
+[[applications]]
+name = 'Everything'
+method = 'winget'
+id = 'voidtools.Everything'
+
+[[applications]]
+name = 'uTools'
+method = 'winget'
+id = 'Yuanli.uTools'
