@@ -133,21 +133,6 @@ method = 'winget'
 id = 'Xmake-io.Xmake'
 
 [[applications]]
-name = 'CCleaner'
-method = 'winget'
-id = 'Piriform.CCleaner'
-
-[[applications]]
 name = 'Recuva'
 method = 'winget'
 id = 'Piriform.Recuva'
-
-[[applications]]
-name = 'Everything'
-method = 'winget'
-id = 'voidtools.Everything'
-
-[[applications]]
-name = 'uTools'
-method = 'winget'
-id = 'Yuanli.uTools'
