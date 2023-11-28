@@ -126,3 +126,13 @@ id = 'StrawberryPerl.StrawberryPerl'
 name = 'Oh My Posh'
 method = 'winget'
 id = 'JanDeDobbeleer.OhMyPosh'
+
+[[applications]]
+name = 'XMake'
+method = 'winget'
+id = 'Xmake-io.Xmake'
+
+[[applications]]
+name = 'CCleaner'
+method = 'winget'
+id = 'Piriform.CCleaner'

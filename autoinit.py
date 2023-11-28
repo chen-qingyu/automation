@@ -91,7 +91,7 @@ def install_app(apps: list[dict, ...], download_dir: str = f'C:/Users/{os.getlog
                 input(COLOR_INFO + f"Please download and install {app['name']} manually.")
 
             case 'winget':
-                os.system(f'winget install --id {app['id']}')
+                os.system(f'winget install --id {app['id']} --source winget')
 
             case _:
                 print(COLOR_ERROR + "Error: Wrong method.")
