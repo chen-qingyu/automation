@@ -138,6 +138,11 @@ method = 'winget'
 id = 'Piriform.CCleaner'
 
 [[applications]]
+name = 'Recuva'
+method = 'winget'
+id = 'Piriform.Recuva'
+
+[[applications]]
 name = 'Everything'
 method = 'winget'
 id = 'voidtools.Everything'
