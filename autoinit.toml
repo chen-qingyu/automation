@@ -144,7 +144,7 @@ site = 'https://www.haskell.org/ghcup/'
 [[applications]]
 name = 'Java'
 method = 'winget'
-id = 'Oracle.JDK.21'
+id = 'Oracle.JDK.21' # may need check the latest version
 
 [[applications]]
 name = 'JavaScript'
@@ -179,7 +179,7 @@ id = 'SWI-Prolog.SWI-Prolog'
 [[applications]]
 name = 'Ruby'
 method = 'winget'
-id = 'RubyInstallerTeam.RubyWithDevKit.3.2'
+id = 'RubyInstallerTeam.RubyWithDevKit.3.2' # may need check the latest version
 
 [[applications]]
 name = 'Racket'
