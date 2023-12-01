@@ -101,28 +101,6 @@ method = 'manual'
 site = 'https://visualstudio.microsoft.com/downloads/'
 
 [[applications]]
-name = 'GNU Octave'
-method = 'winget'
-id = 'GNU.Octave'
-
-[[applications]]
-name = 'CMake'
-method = 'winget'
-id = 'Kitware.CMake'
-
-[[applications]]
-name = 'Doxygen'
-method = 'winget'
-id = 'DimitriVanHeesch.Doxygen'
-
-# Must appear after CMake and Doxygen because PATH order.
-[[applications]]
-# Include GNU Compiler Collection.
-name = 'Perl'
-method = 'winget'
-id = 'StrawberryPerl.StrawberryPerl'
-
-[[applications]]
 name = 'Oh My Posh'
 method = 'winget'
 id = 'JanDeDobbeleer.OhMyPosh'
@@ -136,3 +114,109 @@ id = 'Xmake-io.Xmake'
 name = 'Recuva'
 method = 'winget'
 id = 'Piriform.Recuva'
+
+# Include GNU Compiler Collection, CMake, Doxygen, NASM.
+[[applications]]
+name = 'Perl'
+method = 'winget'
+id = 'StrawberryPerl.StrawberryPerl'
+
+[[applications]]
+name = 'D'
+method = 'winget'
+id = 'Dlang.DMD'
+
+[[applications]]
+name = 'Erlang'
+method = 'winget'
+id = 'Erlang.ErlangOTP'
+
+[[applications]]
+name = 'Elixir'
+method = 'manual'
+site = 'https://elixir-lang.org/install.html#windows'
+
+[[applications]]
+name = 'Haskell'
+method = 'manual'
+site = 'https://www.haskell.org/ghcup/'
+
+[[applications]]
+name = 'Java'
+method = 'winget'
+id = 'Oracle.JDK.21'
+
+[[applications]]
+name = 'JavaScript'
+method = 'winget'
+id = 'OpenJS.NodeJS.LTS'
+
+[[applications]]
+name = 'Lua'
+method = 'winget'
+id = 'DEVCOM.Lua'
+
+[[applications]]
+name = 'GNU Octave'
+method = 'winget'
+id = 'GNU.Octave'
+
+[[applications]]
+name = 'Mathematica'
+method = 'winget'
+id = 'WolframResearch.WolframEngine'
+
+[[applications]]
+name = 'NetLogo'
+method = 'winget'
+id = 'CCL.NetLogo'
+
+[[applications]]
+name = 'Prolog'
+method = 'winget'
+id = 'SWI-Prolog.SWI-Prolog'
+
+[[applications]]
+name = 'Ruby'
+method = 'winget'
+id = 'RubyInstallerTeam.RubyWithDevKit.3.2'
+
+[[applications]]
+name = 'Racket'
+method = 'winget'
+id = 'Racket.Racket'
+
+[[applications]]
+name = 'Rust'
+method = 'winget'
+id = 'Rustlang.Rustup'
+
+[[applications]]
+name = 'Standard ML'
+method = 'manual'
+site = 'https://www.smlnj.org/index.html'
+
+[[applications]]
+name = 'SQL'
+method = 'winget'
+id = 'SQLite.SQLite'
+
+[[applications]]
+name = 'SQLiteStudio'
+method = 'winget'
+id = 'sqlitestudio.pl.SQLiteStudio'
+
+[[applications]]
+name = 'TeX'
+method = 'winget'
+id = 'MiKTeX.MiKTeX'
+
+[[applications]]
+name = 'TeXstudio'
+method = 'winget'
+id = 'TeXstudio.TeXstudio'
+
+[[applications]]
+name = 'Verilog'
+method = 'manual'
+site = 'https://bleyer.org/icarus/'
