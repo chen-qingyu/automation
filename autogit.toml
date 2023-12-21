@@ -35,22 +35,22 @@ remote = { github = 'https://github.com/chen-qingyu/BadApple', gitee = 'https://
 upstream = 'github'
 
 [[repos]]
-path = 'F:/C Code'
+path = 'F:/Code/C Code'
 remote = { github = 'https://github.com/chen-qingyu/C-Code.git', gitee = 'https://gitee.com/ChobitsY/C-Code.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Python Code'
+path = 'F:/Code/Python Code'
 remote = { github = 'https://github.com/chen-qingyu/Python-Code.git', gitee = 'https://gitee.com/ChobitsY/Python-Code.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'F:/STM32 Code'
+path = 'F:/Code/STM32 Code'
 remote = { github = 'https://github.com/chen-qingyu/STM32-Code.git', gitee = 'https://gitee.com/ChobitsY/STM32-Code.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'F:/TeX Code'
+path = 'F:/Code/TeX Code'
 remote = { github = 'https://github.com/chen-qingyu/TeX-Code.git', gitee = 'https://gitee.com/ChobitsY/TeX-Code.git' }
 upstream = 'github'
 
