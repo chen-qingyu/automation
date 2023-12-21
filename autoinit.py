@@ -20,7 +20,7 @@ if not (sys.version_info.major == 3 and sys.version_info.minor >= 12):
 with open('autoinit.toml', 'rb') as f:
     DATA: dict = tomllib.load(f)
     LIBS: list[str, ...] = DATA['libraries']
-    APPS: list[dict, ...] = DATA['applications']
+    APPS: list[dict, ...] = DATA['app']
 
 
 def main():
