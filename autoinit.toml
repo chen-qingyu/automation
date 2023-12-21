@@ -38,8 +38,8 @@ libraries = [
     'objprint',
     'viztracer',
 
-    'django',
-    'djlint',
+    # 'django',
+    # 'djlint',
 ]
 
 # Applications that need to be installed.

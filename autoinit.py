@@ -64,7 +64,7 @@ def main():
 
 def install_lib(libs: list[str, ...]):
     print(COLOR_START + f"Start install/upgrade libraries: {', '.join(libs)}")
-    os.system(f'python -m pip install --upgrade --index-url https://pypi.tuna.tsinghua.edu.cn/simple {' '.join(libs)}')
+    os.system(f'python -m pip install --upgrade {' '.join(libs)}')
     os.system('python -m pip cache purge')
     print(COLOR_FINISH + f"Finish install/upgrade libraries: {', '.join(libs)}")
 
