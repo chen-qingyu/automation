@@ -115,6 +115,196 @@ name = 'Recuva'
 method = 'winget'
 id = 'Piriform.Recuva'
 
+[[applications]]
+name = 'Doxygen'
+method = 'winget'
+id = 'DimitriVanHeesch.Doxygen'
+
+[[applications]]
+name = 'Unity Hub'
+method = 'winget'
+id = 'Unity.UnityHub'
+
+[[applications]]
+name = 'Dr. Memory'
+method = 'winget'
+id = 'DynamoRIO.drmemory'
+
+[[applications]]
+name = 'Wireshark'
+method = 'winget'
+id = 'WiresharkFoundation.Wireshark'
+
+[[applications]]
+name = 'VirtualBox'
+method = 'winget'
+id = 'Oracle.VirtualBox'
+
+[[applications]]
+name = 'Zeal'
+method = 'winget'
+id = 'OlegShparber.Zeal'
+
+[[applications]]
+name = 'Google Earth'
+method = 'winget'
+id = 'Google.EarthPro'
+
+[[applications]]
+name = 'qBittorrent'
+method = 'winget'
+id = 'qBittorrent.qBittorrent'
+
+[[applications]]
+name = 'calibre'
+method = 'winget'
+id = 'calibre.calibre'
+
+[[applications]]
+name = 'Inno Setup'
+method = 'winget'
+id = 'JRSoftware.InnoSetup'
+
+[[applications]]
+name = '网易云音乐'
+method = 'winget'
+id = 'NetEase.CloudMusic'
+
+[[applications]]
+name = 'UMLet'
+method = 'manual'
+site = 'https://www.umlet.com/changes.htm'
+
+[[applications]]
+name = 'Free Download Manager'
+method = 'winget'
+id = 'SoftDeluxe.FreeDownloadManager'
+
+[[applications]]
+name = 'WinMerge'
+method = 'winget'
+id = 'WinMerge.WinMerge'
+
+[[applications]]
+name = 'GeoGebra'
+method = 'winget'
+id = 'GeoGebra.Classic'
+
+[[applications]]
+name = '百度网盘'
+method = 'winget'
+id = 'Baidu.BaiduNetdisk'
+
+[[applications]]
+name = '仙剑奇侠传四'
+method = 'manual'
+site = 'http://pal4.roogames.com/pal4/download/'
+
+[[applications]]
+name = 'Golly'
+method = 'manual'
+site = 'https://sourceforge.net/projects/golly/files/'
+
+[[applications]]
+name = '孤独に効く百合'
+method = 'manual'
+site = 'https://store.steampowered.com/app/800120/Lonely_Yuri/'
+
+[[applications]]
+name = 'SpaceEngine'
+method = 'manual'
+site = 'https://store.steampowered.com/app/314650/SpaceEngine/'
+
+[[applications]]
+name = 'ENDER LILIES: Quietus of the Knights'
+method = 'manual'
+site = 'https://store.steampowered.com/app/1369630/ENDER_LILIES_Quietus_of_the_Knights/'
+
+[[applications]]
+name = 'Ballex'
+method = 'manual'
+site = 'https://store.steampowered.com/app/1114430/Ballex/'
+
+[[applications]]
+name = 'Dark Souls Ⅲ'
+method = 'manual'
+site = 'https://store.steampowered.com/app/374320/DARK_SOULS_III/'
+
+[[applications]]
+name = '0 A.D.'
+method = 'manual'
+site = 'https://play0ad.com/download/win/'
+
+[[applications]]
+name = 'QQ'
+method = 'winget'
+id = 'Tencent.QQ'
+
+[[applications]]
+name = '微信'
+method = 'winget'
+id = 'Tencent.WeChat'
+
+[[applications]]
+name = '腾讯会议'
+method = 'winget'
+id = 'Tencent.TencentMeeting'
+
+[[applications]]
+name = 'RustDesk'
+method = 'winget'
+id = 'RustDesk.RustDesk'
+
+[[applications]]
+name = 'PotPlayer'
+method = 'winget'
+id = 'Daum.PotPlayer'
+
+[[applications]]
+name = 'Honeyview'
+method = 'winget'
+id = 'Bandisoft.Honeyview'
+
+[[applications]]
+name = 'Snipaste'
+method = 'manual'
+site = 'https://www.snipaste.com/download.html'
+
+[[applications]]
+name = 'EV录屏'
+method = 'manual'
+site = 'https://www.ieway.cn/evcapture.html'
+
+[[applications]]
+name = 'FreePiano'
+method = 'manual'
+site = 'https://freepiano.tiwb.com/cn/'
+
+[[applications]]
+name = 'Graphviz'
+method = 'winget'
+id = 'Graphviz.Graphviz'
+
+[[applications]]
+name = 'TrafficMonitor'
+method = 'manual'
+site = 'https://github.com/zhongyang219/TrafficMonitor/releases'
+
+[[applications]]
+name = 'x64dbg'
+method = 'manual'
+site = 'https://github.com/x64dbg/x64dbg/releases'
+
+[[applications]]
+name = 'HxD'
+method = 'winget'
+id = 'MHNexus.HxD'
+
+[[applications]]
+name = 'NASM'
+method = 'winget'
+id = 'NASM.NASM'
+
 # Include GNU Compiler Collection, CMake, Doxygen, NASM.
 [[applications]]
 name = 'Perl'
