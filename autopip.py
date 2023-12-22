@@ -29,18 +29,18 @@ def main():
 
 
 def install_lib(libs: list[str]):
-    print(COLOR_START + f"Start install/upgrade libraries: {', '.join(libs)}")
+    print(COLOR_START + f"Start install/upgrade packages: {', '.join(libs)}")
     os.system(f'python -m pip install --upgrade {' '.join(libs)}')
     os.system('python -m pip cache purge')
-    print(COLOR_FINISH + f"Finish install/upgrade libraries: {', '.join(libs)}")
+    print(COLOR_FINISH + f"Finish install/upgrade packages: {', '.join(libs)}")
 
 
 def clean_lib():
-    print(COLOR_START + f"Start clean libraries.")
+    print(COLOR_START + f"Start clean packages.")
     os.system('python -m pip freeze > pkgs.txt')
     os.system('python -m pip uninstall --requirement pkgs.txt --yes')
     os.remove('pkgs.txt')
-    print(COLOR_FINISH + f"Finish clean libraries.")
+    print(COLOR_FINISH + f"Finish clean packages.")
 
 
 if __name__ == '__main__':
