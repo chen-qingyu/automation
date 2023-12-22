@@ -41,7 +41,7 @@ def install_app(apps: list[dict], download_dir: str = f'C:/Users/{os.getlogin()}
         import requests
         import tqdm
 
-    for i, app in zip(range(len(apps)), apps):
+    for i, app in enumerate(apps):
         print(COLOR_START + f"({i + 1}/{len(apps)}) Start download/install {app['name']}...")
 
         match app['method']:

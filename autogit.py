@@ -39,7 +39,7 @@ def main():
 def process_command(repos: list[dict], command: str):
     print(COLOR_START + f"Start {command}.")
 
-    for i, repo in zip(range(len(repos)), repos):
+    for i, repo in enumerate(repos):
         print(COLOR_INFO + f"({i + 1}/{len(repos)}) {command} {repo['path']}:")
 
         if command == 'clone':
