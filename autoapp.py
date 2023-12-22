@@ -24,11 +24,6 @@ def main():
         data: dict = tomllib.load(f)
         apps: list[dict] = data['app']
 
-    print("Start dynamically load third-party libraries.")
-    install_lib(['pip', 'setuptools', 'wheel'])
-    install_lib(['requests', 'tqdm'])
-    print(COLOR_FINISH + "Finish dynamically load third-party libraries.")
-
     if platform.system() != 'Windows':
         print(COLOR_ERROR + "This script currently only supports the Windows platform.\n")
         exit(-1)
@@ -38,8 +33,13 @@ def main():
 
 
 def install_app(apps: list[dict], download_dir: str = f'C:/Users/{os.getlogin()}/Downloads/'):
-    import requests
-    import tqdm
+    try:
+        import requests
+        import tqdm
+    except ModuleNotFoundError:
+        install_lib(['requests', 'tqdm'])
+        import requests
+        import tqdm
 
     for i, app in zip(range(len(apps)), apps):
         print(COLOR_START + f"({i + 1}/{len(apps)}) Start download/install {app['name']}...")

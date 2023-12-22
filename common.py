@@ -10,7 +10,7 @@ if not (sys.version_info.major == 3 and sys.version_info.minor >= 12):
 try:
     import colorama
 except ModuleNotFoundError:
-    os.system('python -m pip install --upgrade pip setuptools wheel colorama')
+    os.system('python -m pip install --upgrade pip colorama')
     os.system('python -m pip cache purge')
     import colorama
 
