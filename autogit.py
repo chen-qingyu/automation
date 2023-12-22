@@ -4,34 +4,10 @@
 # CreateDate: 2022.02.11
 
 import os
-import sys
 import tomllib
 import argparse
 
-# check version
-if not (sys.version_info.major == 3 and sys.version_info.minor >= 12):
-    print("Require at least Python >= 3.12")
-    exit(1)
-
-# dynamically load third-party libraries
-try:
-    import colorama
-except ModuleNotFoundError:
-    os.system('python -m pip install --upgrade --index-url https://pypi.tuna.tsinghua.edu.cn/simple pip setuptools wheel colorama')
-    os.system('python -m pip cache purge')
-    import colorama
-
-colorama.init(autoreset=True)
-COLOR_START = colorama.Fore.BLUE + colorama.Style.BRIGHT
-COLOR_INFO = colorama.Fore.CYAN + colorama.Style.BRIGHT
-COLOR_FINISH = colorama.Fore.GREEN + colorama.Style.BRIGHT
-COLOR_ERROR = colorama.Fore.RED + colorama.Style.BRIGHT
-
-# read data
-with open('autogit.toml', 'rb') as f:
-    DATA: dict = tomllib.load(f)
-    REPOS: list[dict, ...] = DATA['repos']
-    REPOS.sort(key=lambda repo: os.path.getmtime(repo['path']) if os.path.exists(repo['path']) else 0, reverse=True)
+from common import COLOR_START, COLOR_INFO, COLOR_FINISH, COLOR_ERROR
 
 
 def main():
@@ -51,14 +27,20 @@ def main():
     parser.add_argument("command", type=str, help="Git command", choices=['status', 'clone', 'push', 'pull', 'clean', 'remote', 'gc'])
     args = parser.parse_args()
 
-    process_command(args.command)
+    # read data
+    with open('autogit.toml', 'rb') as f:
+        data: dict = tomllib.load(f)
+        repos: list[dict] = data['repos']
+        repos.sort(key=lambda repo: os.path.getmtime(repo['path']) if os.path.exists(repo['path']) else 0, reverse=True)
+
+    process_command(repos, args.command)
 
 
-def process_command(command: str):
+def process_command(repos: list[dict], command: str):
     print(COLOR_START + f"Start {command}.")
 
-    for i, repo in zip(range(len(REPOS)), REPOS):
-        print(COLOR_INFO + f"({i + 1}/{len(REPOS)}) {command} {repo['path']}:")
+    for i, repo in zip(range(len(repos)), repos):
+        print(COLOR_INFO + f"({i + 1}/{len(repos)}) {command} {repo['path']}:")
 
         if command == 'clone':
             if os.path.exists(repo['path']):

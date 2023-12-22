@@ -1,0 +1,39 @@
+# Python third-party packages that need to be installed/upgraded.
+packages = [
+    'numpy',
+    'scipy',
+    'sympy',
+
+    'matplotlib',
+    'pillow',     # PIL
+    # 'jupyter',
+
+    'pyinstaller',
+    'pygame',
+    'pyautogui',
+    'pyserial',    # serial
+
+    # 'wordcloud',
+    # 'jieba',
+
+    'requests',
+    'beautifulsoup4', # bs4
+
+    'opencv-python', # cv2, name conflicts with easyocr's dep: opencv-python-headless
+    # 'tensorflow', # the latest version conflicts with numpy
+
+    'autopep8',
+    'ipython',
+
+    'colorama',
+    'tqdm',
+
+    'PySide6',
+
+    'graph-tools',
+    'objprint',
+    'viztracer',
+
+    # 'django',
+    # 'djlint',
+]
