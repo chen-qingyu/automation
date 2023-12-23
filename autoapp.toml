@@ -12,363 +12,363 @@
 
 # Code
 
-[[app]]
+[[apps]]
 name = 'NASM'
 method = 'winget'
 id = 'NASM.NASM'
 
 # Include GNU Compiler Collection
-[[app]]
+[[apps]]
 name = 'Perl'
 method = 'winget'
 id = 'StrawberryPerl.StrawberryPerl'
 
-[[app]]
+[[apps]]
 name = 'D'
 method = 'winget'
 id = 'Dlang.DMD'
 
-[[app]]
+[[apps]]
 name = 'Erlang'
 method = 'winget'
 id = 'Erlang.ErlangOTP'
 
-[[app]]
+[[apps]]
 name = 'Elixir'
 method = 'manual'
 site = 'https://elixir-lang.org/install.html#windows'
 
-[[app]]
+[[apps]]
 name = 'Haskell'
 method = 'manual'
 site = 'https://www.haskell.org/ghcup/'
 
-[[app]]
+[[apps]]
 name = 'Java'
 method = 'winget'
 id = 'Oracle.JDK.21' # may need check the latest version
 
-[[app]]
+[[apps]]
 name = 'JavaScript'
 method = 'winget'
 id = 'OpenJS.NodeJS.LTS'
 
-[[app]]
+[[apps]]
 name = 'Lua'
 method = 'winget'
 id = 'DEVCOM.Lua'
 
-[[app]]
+[[apps]]
 name = 'GNU Octave'
 method = 'winget'
 id = 'GNU.Octave'
 
-[[app]]
+[[apps]]
 name = 'Mathematica'
 method = 'winget'
 id = 'WolframResearch.WolframEngine'
 
-[[app]]
+[[apps]]
 name = 'NetLogo'
 method = 'winget'
 id = 'CCL.NetLogo'
 
-[[app]]
+[[apps]]
 name = 'Prolog'
 method = 'winget'
 id = 'SWI-Prolog.SWI-Prolog'
 
-[[app]]
+[[apps]]
 name = 'Ruby'
 method = 'winget'
 id = 'RubyInstallerTeam.RubyWithDevKit.3.2' # may need check the latest version
 
-[[app]]
+[[apps]]
 name = 'Racket'
 method = 'winget'
 id = 'Racket.Racket'
 
-[[app]]
+[[apps]]
 name = 'Rust'
 method = 'winget'
 id = 'Rustlang.Rustup'
 
-[[app]]
+[[apps]]
 name = 'Standard ML'
 method = 'manual'
 site = 'https://www.smlnj.org/index.html'
 
-[[app]]
+[[apps]]
 name = 'SQL'
 method = 'winget'
 id = 'SQLite.SQLite'
 
-[[app]]
+[[apps]]
 name = 'TeX'
 method = 'winget'
 id = 'MiKTeX.MiKTeX'
 
-[[app]]
+[[apps]]
 name = 'Verilog'
 method = 'manual'
 site = 'https://bleyer.org/icarus/'
 
-[[app]]
+[[apps]]
 name = 'Sublime Text'
 method = 'winget'
 id = 'SublimeHQ.SublimeText.4'
 
-[[app]]
+[[apps]]
 name = 'Visual Studio Code'
 method = 'winget'
 id = 'Microsoft.VisualStudioCode'
 
-[[app]]
+[[apps]]
 name = 'Visual Studio Community'
 method = 'manual'
 site = 'https://visualstudio.microsoft.com/downloads/'
 
-[[app]]
+[[apps]]
 name = 'Toolbox App'
 method = 'winget'
 id = 'JetBrains.Toolbox'
 
-[[app]]
+[[apps]]
 name = 'Qt'
 method = 'automatic'
 url = 'https://mirror.nju.edu.cn/qt/official_releases/online_installers/qt-unified-windows-x64-online.exe'
 args = '--mirror https://mirror.nju.edu.cn/qt'
 
-[[app]]
+[[apps]]
 name = 'Unity Hub'
 method = 'winget'
 id = 'Unity.UnityHub'
 
-[[app]]
+[[apps]]
 name = 'SQLiteStudio'
 method = 'winget'
 id = 'sqlitestudio.pl.SQLiteStudio'
 
-[[app]]
+[[apps]]
 name = 'TeXstudio'
 method = 'winget'
 id = 'TeXstudio.TeXstudio'
 
-[[app]]
+[[apps]]
 name = 'Git'
 method = 'winget'
 id = 'Git.Git'
 
-[[app]]
+[[apps]]
 name = 'Xmake'
 method = 'winget'
 id = 'Xmake-io.Xmake'
 
-[[app]]
+[[apps]]
 name = 'Doxygen'
 method = 'winget'
 id = 'DimitriVanHeesch.Doxygen'
 
-[[app]]
+[[apps]]
 name = 'Oh My Posh'
 method = 'winget'
 id = 'JanDeDobbeleer.OhMyPosh'
 
-[[app]]
+[[apps]]
 name = 'Dr. Memory'
 method = 'winget'
 id = 'DynamoRIO.drmemory'
 
-[[app]]
+[[apps]]
 name = 'Zeal'
 method = 'winget'
 id = 'OlegShparber.Zeal'
 
-[[app]]
+[[apps]]
 name = 'Inno Setup'
 method = 'winget'
 id = 'JRSoftware.InnoSetup'
 
-[[app]]
+[[apps]]
 name = 'Wireshark'
 method = 'winget'
 id = 'WiresharkFoundation.Wireshark'
 
-[[app]]
+[[apps]]
 name = 'HxD'
 method = 'winget'
 id = 'MHNexus.HxD'
 
-[[app]]
+[[apps]]
 name = 'Graphviz'
 method = 'winget'
 id = 'Graphviz.Graphviz'
 
-[[app]]
+[[apps]]
 name = 'Sourcetrail'
 method = 'manual'
 site = 'https://github.com/CoatiSoftware/Sourcetrail/releases'
 
-[[app]]
+[[apps]]
 name = 'UMLet'
 method = 'manual'
 site = 'https://www.umlet.com/changes.htm'
 
-[[app]]
+[[apps]]
 name = 'x64dbg'
 method = 'manual'
 site = 'https://github.com/x64dbg/x64dbg/releases'
 
 # Tool
 
-[[app]]
+[[apps]]
 name = 'Bandizip'
 method = 'winget'
 id = 'Bandisoft.Bandizip'
 
-[[app]]
+[[apps]]
 name = 'Blender'
 method = 'winget'
 id = 'BlenderFoundation.Blender'
 
-[[app]]
+[[apps]]
 name = 'Recuva'
 method = 'winget'
 id = 'Piriform.Recuva'
 
-[[app]]
+[[apps]]
 name = 'VirtualBox'
 method = 'winget'
 id = 'Oracle.VirtualBox'
 
-[[app]]
+[[apps]]
 name = 'Google Earth'
 method = 'winget'
 id = 'Google.EarthPro'
 
-[[app]]
+[[apps]]
 name = 'qBittorrent'
 method = 'winget'
 id = 'qBittorrent.qBittorrent'
 
-[[app]]
+[[apps]]
 name = 'calibre'
 method = 'winget'
 id = 'calibre.calibre'
 
-[[app]]
+[[apps]]
 name = '网易云音乐'
 method = 'winget'
 id = 'NetEase.CloudMusic'
 
-[[app]]
+[[apps]]
 name = 'Free Download Manager'
 method = 'winget'
 id = 'SoftDeluxe.FreeDownloadManager'
 
-[[app]]
+[[apps]]
 name = 'WinMerge'
 method = 'winget'
 id = 'WinMerge.WinMerge'
 
-[[app]]
+[[apps]]
 name = 'GeoGebra'
 method = 'winget'
 id = 'GeoGebra.Classic'
 
-[[app]]
+[[apps]]
 name = '百度网盘'
 method = 'winget'
 id = 'Baidu.BaiduNetdisk'
 
-[[app]]
+[[apps]]
 name = 'QQ'
 method = 'winget'
 id = 'Tencent.QQ'
 
-[[app]]
+[[apps]]
 name = '微信'
 method = 'winget'
 id = 'Tencent.WeChat'
 
-[[app]]
+[[apps]]
 name = '腾讯会议'
 method = 'winget'
 id = 'Tencent.TencentMeeting'
 
-[[app]]
+[[apps]]
 name = 'RustDesk'
 method = 'winget'
 id = 'RustDesk.RustDesk'
 
-[[app]]
+[[apps]]
 name = 'PotPlayer'
 method = 'winget'
 id = 'Daum.PotPlayer'
 
-[[app]]
+[[apps]]
 name = 'Honeyview'
 method = 'winget'
 id = 'Bandisoft.Honeyview'
 
-[[app]]
+[[apps]]
 name = 'Snipaste'
 method = 'manual'
 site = 'https://www.snipaste.com/download.html'
 
-[[app]]
+[[apps]]
 name = 'EV录屏'
 method = 'manual'
 site = 'https://www.ieway.cn/evcapture.html'
 
-[[app]]
+[[apps]]
 name = 'FreePiano'
 method = 'manual'
 site = 'https://freepiano.tiwb.com/cn/'
 
-[[app]]
+[[apps]]
 name = 'TrafficMonitor'
 method = 'manual'
 site = 'https://github.com/zhongyang219/TrafficMonitor/releases'
 
 # Game
 
-[[app]]
+[[apps]]
 name = '仙剑奇侠传四'
 method = 'manual'
 site = 'http://pal4.roogames.com/pal4/download/'
 
-[[app]]
+[[apps]]
 name = 'Golly'
 method = 'manual'
 site = 'https://sourceforge.net/projects/golly/files/'
 
-[[app]]
+[[apps]]
 name = '孤独に効く百合'
 method = 'manual'
 site = 'https://store.steampowered.com/app/800120/Lonely_Yuri/'
 
-[[app]]
+[[apps]]
 name = 'SpaceEngine'
 method = 'manual'
 site = 'https://store.steampowered.com/app/314650/SpaceEngine/'
 
-[[app]]
+[[apps]]
 name = 'ENDER LILIES: Quietus of the Knights'
 method = 'manual'
 site = 'https://store.steampowered.com/app/1369630/ENDER_LILIES_Quietus_of_the_Knights/'
 
-[[app]]
+[[apps]]
 name = 'Ballex'
 method = 'manual'
 site = 'https://store.steampowered.com/app/1114430/Ballex/'
 
-[[app]]
+[[apps]]
 name = 'Dark Souls Ⅲ'
 method = 'manual'
 site = 'https://store.steampowered.com/app/374320/DARK_SOULS_III/'
 
-[[app]]
+[[apps]]
 name = '0 A.D.'
 method = 'manual'
 site = 'https://play0ad.com/download/win/'

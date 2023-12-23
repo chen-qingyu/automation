@@ -23,7 +23,7 @@ def main():
     # read data
     with open('autoapp.toml', 'rb') as f:
         data: dict = tomllib.load(f)
-        apps: list[dict] = data['app']
+        apps: list[dict] = data['apps']
 
     if platform.system() != 'Windows':
         print(COLOR_ERROR + "This script currently only supports the Windows platform.\n")
