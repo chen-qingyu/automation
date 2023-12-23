@@ -1,7 +1,8 @@
 # FileName: autogit.py
-# Brief: Python3 script for automating batch manage git repositories.
-# Author: Qing Yu
+# Brief: Python script for automating batch manage git repositories.
+# Author: 青羽 (chen_qingyu@qq.com, https://chen-qingyu.github.io/)
 # CreateDate: 2022.02.11
+# Copyright (C) 2022 - 2023
 
 import os
 import tomllib

@@ -1,7 +1,8 @@
 # FileName: autoapp.py
-# Brief: Python3 script for automating install applications.
-# Author: Qing Yu
+# Brief: Python script for automating install applications.
+# Author: 青羽 (chen_qingyu@qq.com, https://chen-qingyu.github.io/)
 # CreateDate: 2023.09.27
+# Copyright (C) 2023
 
 import os
 import platform

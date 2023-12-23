@@ -6,7 +6,7 @@ if sys.version_info < (3, 12):
     print("Require at least Python >= 3.12")
     exit(1)
 
-# dynamically load third-party libraries
+# colorize text
 try:
     import colorama
 except ModuleNotFoundError:

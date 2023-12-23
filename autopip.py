@@ -1,7 +1,8 @@
 # FileName: autopip.py
-# Brief: Python3 script for automating install/upgrade packages.
-# Author: Qing Yu
+# Brief: Python script for automating install/upgrade packages.
+# Author: 青羽 (chen_qingyu@qq.com, https://chen-qingyu.github.io/)
 # CreateDate: 2023.12.22
+# Copyright (C) 2023
 
 import os
 import tomllib
