@@ -20,23 +20,34 @@ def main():
     # read data
     with open('autopip.toml', 'rb') as f:
         data: dict = tomllib.load(f)
-        libs: list[str] = data['packages']
+        pkgs: list[str] = data['packages']
 
     # process command
     if args.clean:
-        clean_lib()
+        clean_pkg()
     else:
-        install_lib(libs)
+        install_pkg(pkgs)
 
 
-def install_lib(libs: list[str]):
-    print(COLOR_START + f"Start install/upgrade packages: {', '.join(libs)}")
-    os.system(f'python -m pip install --upgrade {' '.join(libs)}')
+def install_pkg(pkgs: list[str]):
+    """
+    Installs or upgrades a list of packages using pip in Python.
+
+    :param pkgs: a list of package names that need to be installed or upgraded
+    :type pkgs: list[str]
+    """
+
+    print(COLOR_START + f"Start install/upgrade packages: {', '.join(pkgs)}")
+    os.system(f'python -m pip install --upgrade {' '.join(pkgs)}')
     os.system('python -m pip cache purge')
-    print(COLOR_FINISH + f"Finish install/upgrade packages: {', '.join(libs)}")
+    print(COLOR_FINISH + f"Finish install/upgrade packages: {', '.join(pkgs)}")
 
 
-def clean_lib():
+def clean_pkg():
+    """
+    Cleans up all installed Python packages.
+    """
+
     print(COLOR_START + f"Start clean packages.")
     os.system('python -m pip freeze > pkgs.txt')
     os.system('python -m pip uninstall --requirement pkgs.txt --yes')

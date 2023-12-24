@@ -11,7 +11,7 @@ import tomllib
 import argparse
 
 from common import COLOR_START, COLOR_INFO, COLOR_FINISH, COLOR_ERROR
-from autopip import install_lib
+from autopip import install_pkg
 
 
 def main():
@@ -34,11 +34,20 @@ def main():
 
 
 def install_app(apps: list[dict], download_dir: str = f'C:/Users/{os.getlogin()}/Downloads/'):
+    """
+    Download and install a list of applications either automatically, manually, or using the `winget` package manager.
+
+    :param apps: a list of dictionaries, where each dictionary represents an app to be installed.
+    :type apps: list[dict]
+    :param download_dir: specifies the directory where the downloaded files will be saved.
+    :type download_dir: str (optional)
+    """
+
     try:
         import requests
         import tqdm
     except ModuleNotFoundError:
-        install_lib(['requests', 'tqdm'])
+        install_pkg(['requests', 'tqdm'])
         import requests
         import tqdm
 
