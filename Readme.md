@@ -9,7 +9,6 @@ Automation Scripts
 
   - autogit.py: Python script for automating batch manage git repositories.
   - autogit.toml: List of git repositories.
-  - autogit-gui.py: GUI for autogit.
 
 - AutoPip
 
