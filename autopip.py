@@ -13,8 +13,12 @@ from common import COLOR_START, COLOR_INFO, COLOR_FINISH, COLOR_ERROR
 
 def main():
     # parse command
-    parser = argparse.ArgumentParser(prog="autopip", description="Python3 script for automating install/upgrade packages.")
-    parser.add_argument("--clean", action='store_true')
+    help_text = """
+    install: installs or upgrades a list of packages using pip in Python.
+    clean:  cleans up all installed Python packages.
+    """
+    parser = argparse.ArgumentParser(prog="autopip", description=help_text, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("command", type=str, help="command", choices=['install', 'clean'])
     args = parser.parse_args()
 
     # read data
@@ -23,10 +27,11 @@ def main():
         pkgs: list[str] = data['packages']
 
     # process command
-    if args.clean:
-        clean_pkg()
-    else:
-        install_pkg(pkgs)
+    match args.command:
+        case 'install':
+            install_pkg(pkgs)
+        case 'clean':
+            clean_pkg()
 
 
 def install_pkg(pkgs: list[str]):

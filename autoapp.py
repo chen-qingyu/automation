@@ -17,6 +17,7 @@ from autopip import install_pkg
 def main():
     # parse command
     parser = argparse.ArgumentParser(prog="autoapp", description="Python3 script for automating install applications.")
+    parser.add_argument("command", type=str, help="command", choices=['install'])
     parser.add_argument("name", type=str, help="Python library name or application name", nargs='?', default='')
     args = parser.parse_args()
 
