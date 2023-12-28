@@ -219,6 +219,11 @@ name = 'x64dbg'
 method = 'manual'
 site = 'https://github.com/x64dbg/x64dbg/releases'
 
+[[apps]]
+name = 'Komac'
+method = 'winget'
+id = 'RussellBanks.Komac'
+
 # Tool
 
 [[apps]]
