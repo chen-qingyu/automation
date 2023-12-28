@@ -18,7 +18,7 @@ def main():
     # parse command
     parser = argparse.ArgumentParser(prog="autoapp", description="Python3 script for automating install applications.")
     parser.add_argument("command", type=str, help="command", choices=['install'])
-    args = parser.parse_args()
+    parser.parse_args()
 
     # read data
     with open('autoapp.toml', 'rb') as f:
