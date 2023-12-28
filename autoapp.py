@@ -18,7 +18,6 @@ def main():
     # parse command
     parser = argparse.ArgumentParser(prog="autoapp", description="Python3 script for automating install applications.")
     parser.add_argument("command", type=str, help="command", choices=['install'])
-    parser.add_argument("name", type=str, help="Python library name or application name", nargs='?', default='')
     args = parser.parse_args()
 
     # read data
@@ -31,7 +30,7 @@ def main():
         exit(-1)
 
     # process command
-    install_app(apps if args.name == '' else list(filter(lambda app: app['name'].lower() == args.name.lower(), apps)))
+    install_app(apps)
 
 
 def install_app(apps: list[dict], download_dir: str = f'C:/Users/{os.getlogin()}/Downloads/'):
