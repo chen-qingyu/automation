@@ -35,6 +35,11 @@ remote = { github = 'https://github.com/chen-qingyu/BadApple', gitee = 'https://
 upstream = 'github'
 
 [[repos]]
+path = 'F:/Projects/bf'
+remote = { github = 'https://github.com/chen-qingyu/bf', gitee = 'https://gitee.com/ChobitsY/bf' }
+upstream = 'github'
+
+[[repos]]
 path = 'F:/Code/C'
 remote = { github = 'https://github.com/chen-qingyu/C-Code.git', gitee = 'https://gitee.com/ChobitsY/C-Code.git' }
 upstream = 'github'
