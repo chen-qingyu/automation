@@ -104,6 +104,11 @@ method = 'winget'
 id = 'SQLite.SQLite'
 
 [[apps]]
+name = 'TeX'
+method = 'winget'
+id = 'MiKTeX.MiKTeX'
+
+[[apps]]
 name = 'Typst'
 method = 'winget'
 id = 'Typst.Typst'
