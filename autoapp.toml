@@ -104,9 +104,9 @@ method = 'winget'
 id = 'SQLite.SQLite'
 
 [[apps]]
-name = 'TeX'
+name = 'Typst'
 method = 'winget'
-id = 'MiKTeX.MiKTeX'
+id = 'Typst.Typst'
 
 [[apps]]
 name = 'Verilog'
@@ -148,11 +148,6 @@ id = 'Unity.UnityHub'
 name = 'SQLiteStudio'
 method = 'winget'
 id = 'sqlitestudio.pl.SQLiteStudio'
-
-[[apps]]
-name = 'TeXstudio'
-method = 'winget'
-id = 'TeXstudio.TeXstudio'
 
 [[apps]]
 name = 'Git'
