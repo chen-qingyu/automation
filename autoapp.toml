@@ -17,6 +17,11 @@ name = 'NASM'
 method = 'winget'
 id = 'NASM.NASM'
 
+[[apps]]
+name = 'BF'
+method = 'winget'
+id = 'ChenQingYu.BF' # I contributed
+
 # Include GNU Compiler Collection
 [[apps]]
 name = 'Perl'
@@ -95,8 +100,8 @@ id = 'Rustlang.Rustup'
 
 [[apps]]
 name = 'Standard ML'
-method = 'manual'
-site = 'https://www.smlnj.org/index.html'
+method = 'winget'
+id = 'SMLNJ.SMLNJ.Legacy' # I issued
 
 [[apps]]
 name = 'SQL'
@@ -115,8 +120,8 @@ id = 'Typst.Typst'
 
 [[apps]]
 name = 'Verilog'
-method = 'manual'
-site = 'https://bleyer.org/icarus/'
+method = 'winget'
+id = 'Icarus.Verilog' # I issued
 
 [[apps]]
 name = 'Sublime Text'
@@ -206,8 +211,8 @@ id = 'Graphviz.Graphviz'
 
 [[apps]]
 name = 'Sourcetrail'
-method = 'manual'
-site = 'https://github.com/CoatiSoftware/Sourcetrail/releases'
+method = 'winget'
+id = 'CoatiSoftware.Sourcetrail' # I issued
 
 [[apps]]
 name = 'UMLet'
