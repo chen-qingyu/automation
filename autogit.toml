@@ -21,7 +21,7 @@ upstream = 'github'
 
 [[repos]]
 path = 'F:/Projects/MyDataStructure'
-remote = { github = 'https://github.com/chen-qingyu/MyDataStructure.git', gitee = 'https://gitee.com/ChobitsY/MyDataStructure.git' }
+remote = { github = 'https://github.com/chen-qingyu/Pytype.git', gitee = 'https://gitee.com/ChobitsY/Pytype.git' }
 upstream = 'github'
 
 [[repos]]
