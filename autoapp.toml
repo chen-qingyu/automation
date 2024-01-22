@@ -229,6 +229,11 @@ name = 'Komac'
 method = 'winget'
 id = 'RussellBanks.Komac'
 
+[[apps]]
+name = 'GitHub CLI'
+method = 'winget'
+id = 'GitHub.cli'
+
 # Tool
 
 [[apps]]
