@@ -20,7 +20,7 @@ remote = { github = 'https://github.com/chen-qingyu/HelloDataStructure.git', git
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Projects/MyDataStructure'
+path = 'F:/Projects/Pytype'
 remote = { github = 'https://github.com/chen-qingyu/Pytype.git', gitee = 'https://gitee.com/ChobitsY/Pytype.git' }
 upstream = 'github'
 
