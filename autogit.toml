@@ -65,6 +65,11 @@ remote = { github = 'https://github.com/chen-qingyu/TeX-Code.git', gitee = 'http
 upstream = 'github'
 
 [[repos]]
+path = 'F:/Code/Typst'
+remote = { github = 'https://github.com/chen-qingyu/Typst-Code.git', gitee = 'https://gitee.com/ChobitsY/Typst-Code.git' }
+upstream = 'github'
+
+[[repos]]
 path = 'F:/Learn/C Primer Plus'
 remote = { github = 'https://github.com/chen-qingyu/C-Primer-Plus.git', gitee = 'https://gitee.com/ChobitsY/c-primer-plus.git' }
 upstream = 'github'
