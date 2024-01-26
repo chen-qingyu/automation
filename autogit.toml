@@ -20,13 +20,8 @@ remote = { github = 'https://github.com/chen-qingyu/HelloDataStructure.git', git
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Projects/pytype-cpp'
-remote = { github = 'https://github.com/chen-qingyu/pytype-cpp.git', gitee = 'https://gitee.com/ChobitsY/pytype-cpp.git' }
-upstream = 'github'
-
-[[repos]]
-path = 'F:/Projects/pytype-rust'
-remote = { github = 'https://github.com/chen-qingyu/pytype-rust.git', gitee = 'https://gitee.com/ChobitsY/pytype-rust.git' }
+path = 'F:/Projects/pyincpp'
+remote = { github = 'https://github.com/chen-qingyu/pyincpp.git', gitee = 'https://gitee.com/ChobitsY/pyincpp.git' }
 upstream = 'github'
 
 [[repos]]
