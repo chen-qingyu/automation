@@ -1,4 +1,6 @@
-Automation Scripts
+### Automation
+
+Some convenient automation scripts written in Python.
 
 - AutoApp
 

@@ -49,8 +49,8 @@ def process_command(repos: list[dict], command: str):
 
     print(COLOR_START + f"Start {command}.")
 
-    for i, repo in enumerate(repos):
-        print(COLOR_INFO + f"({i + 1}/{len(repos)}) {command} {repo['path']}:")
+    for i, repo in enumerate(repos, start=1):
+        print(COLOR_INFO + f"({i}/{len(repos)}) {command} {repo['path']}:")
 
         if command == 'clone':
             if os.path.exists(repo['path']):
