@@ -20,6 +20,11 @@ remote = { github = 'https://github.com/chen-qingyu/pyincpp.git', gitee = 'https
 upstream = 'github'
 
 [[repos]]
+path = 'F:/Projects/mymatrix'
+remote = { github = 'https://github.com/chen-qingyu/mymatrix.git', gitee = 'https://gitee.com/ChobitsY/mymatrix.git' }
+upstream = 'github'
+
+[[repos]]
 path = 'F:/Projects/HelloWorld'
 remote = { github = 'https://github.com/chen-qingyu/HelloWorld.git', gitee = 'https://gitee.com/ChobitsY/HelloWorld.git' }
 upstream = 'github'
