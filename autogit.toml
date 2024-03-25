@@ -35,11 +35,6 @@ remote = { github = 'https://github.com/chen-qingyu/HelloDataStructure.git', git
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Projects/MyLinearAlgebra'
-remote = { github = 'https://github.com/chen-qingyu/MyLinearAlgebra.git', gitee = 'https://gitee.com/ChobitsY/MyLinearAlgebra.git' }
-upstream = 'github'
-
-[[repos]]
 path = 'F:/Projects/BadApple'
 remote = { github = 'https://github.com/chen-qingyu/BadApple', gitee = 'https://gitee.com/ChobitsY/BadApple' }
 upstream = 'github'
