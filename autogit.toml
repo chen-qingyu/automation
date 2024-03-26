@@ -25,13 +25,13 @@ remote = { github = 'https://github.com/chen-qingyu/mymatrix.git', gitee = 'http
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Projects/HelloWorld'
-remote = { github = 'https://github.com/chen-qingyu/HelloWorld.git', gitee = 'https://gitee.com/ChobitsY/HelloWorld.git' }
+path = 'F:/Projects/hellods'
+remote = { github = 'https://github.com/chen-qingyu/hellods.git', gitee = 'https://gitee.com/ChobitsY/hellods.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Projects/HelloDataStructure'
-remote = { github = 'https://github.com/chen-qingyu/HelloDataStructure.git', gitee = 'https://gitee.com/ChobitsY/HelloDataStructure.git' }
+path = 'F:/Projects/HelloWorld'
+remote = { github = 'https://github.com/chen-qingyu/HelloWorld.git', gitee = 'https://gitee.com/ChobitsY/HelloWorld.git' }
 upstream = 'github'
 
 [[repos]]
