@@ -15,6 +15,11 @@ from autopip import install_pkg
 
 
 def main():
+    # check platform
+    if platform.system() != 'Windows':
+        print(COLOR_ERROR + "This script currently only supports the Windows platform.\n")
+        exit(-1)
+
     # parse command
     parser = argparse.ArgumentParser(prog="autoapp", description="Python3 script for automating install applications.")
     parser.add_argument("command", type=str, help="command", choices=['install', 'search'])
@@ -24,10 +29,6 @@ def main():
     with open('autoapp.toml', 'rb') as f:
         data: dict = tomllib.load(f)
         apps: list[dict] = data['apps']
-
-    if platform.system() != 'Windows':
-        print(COLOR_ERROR + "This script currently only supports the Windows platform.\n")
-        exit(-1)
 
     # process command
     match args.command:

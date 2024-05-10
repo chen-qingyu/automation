@@ -24,6 +24,7 @@ def main():
     gc:     optimize the local repositories.
     """
 
+    # parse command
     parser = argparse.ArgumentParser(prog="autogit", description=help_text, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("command", type=str, help="Git command", choices=['status', 'clone', 'push', 'pull', 'clean', 'remote', 'gc'])
     args = parser.parse_args()
@@ -34,6 +35,7 @@ def main():
         repos: list[dict] = data['repos']
         repos.sort(key=lambda repo: os.path.getmtime(repo['path']) if os.path.exists(repo['path']) else 0, reverse=True)
 
+    # process command
     process_command(repos, args.command)
 
 
