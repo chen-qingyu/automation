@@ -17,8 +17,8 @@ from autopip import install_pkg
 def main():
     # parse command
     parser = argparse.ArgumentParser(prog="autoapp", description="Python3 script for automating install applications.")
-    parser.add_argument("command", type=str, help="command", choices=['install'])
-    parser.parse_args()
+    parser.add_argument("command", type=str, help="command", choices=['install', 'search'])
+    args = parser.parse_args()
 
     # read data
     with open('autoapp.toml', 'rb') as f:
@@ -30,7 +30,11 @@ def main():
         exit(-1)
 
     # process command
-    install_app(apps)
+    match args.command:
+        case 'install':
+            install_app(apps)
+        case 'search':
+            search_app(apps)
 
 
 def install_app(apps: list[dict], download_dir: str = f'C:/Users/{os.getlogin()}/Downloads/'):
@@ -78,6 +82,16 @@ def install_app(apps: list[dict], download_dir: str = f'C:/Users/{os.getlogin()}
                 print(COLOR_ERROR + "Error: Wrong method.")
 
         print(COLOR_FINISH + f"Finish download/install {app['name']}.\n")
+
+
+def search_app(apps: list[dict]):
+    """ Check which apps can be installed using winget now. """
+
+    for app in apps:
+        if app['method'] != 'winget':
+            print(COLOR_INFO + f"{app['name']} [{app['method']}]")
+            os.system(f'winget search "{app['name']}"')
+            print()
 
 
 if __name__ == '__main__':
