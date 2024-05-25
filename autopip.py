@@ -43,7 +43,8 @@ def install_pkg(pkgs: list[str]):
     """
 
     print(COLOR_START + f"Start install/upgrade packages: {', '.join(pkgs)}")
-    os.system(f'python -m pip install --upgrade {' '.join(pkgs)}')
+    os.system('python -m pip install --upgrade -i https://mirrors.aliyun.com/pypi/simple/ pip')
+    os.system(f'python -m pip install --upgrade -i https://mirrors.aliyun.com/pypi/simple/ {' '.join(pkgs)}')
     os.system('python -m pip cache purge')
     print(COLOR_FINISH + f"Finish install/upgrade packages: {', '.join(pkgs)}")
 
