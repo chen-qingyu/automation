@@ -34,4 +34,6 @@ packages = [
     'graph-tools',
     'objprint',
     'viztracer',
+
+    'dashscope',
 ]
