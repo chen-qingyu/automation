@@ -234,6 +234,11 @@ name = 'GitHub CLI'
 method = 'winget'
 id = 'GitHub.cli'
 
+[[apps]]
+name = 'Pandoc'
+method = 'winget'
+id = 'JohnMacFarlane.Pandoc'
+
 # Tool
 
 [[apps]]
