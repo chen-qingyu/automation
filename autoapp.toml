@@ -239,6 +239,11 @@ name = 'Pandoc'
 method = 'winget'
 id = 'JohnMacFarlane.Pandoc'
 
+[[apps]]
+name = 'Cloc'
+method = 'winget'
+id = 'AlDanial.Cloc'
+
 # Tool
 
 [[apps]]
