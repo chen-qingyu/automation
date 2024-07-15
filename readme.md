@@ -1,18 +1,18 @@
-### Automation
+# Automation
 
 Some convenient automation scripts written in Python.
 
-- AutoApp
+## AutoApp
 
-  - autoapp.py: Python script for automating install applications.
-  - autoapp.toml: Applications that need to be installed.
+- autoapp.py: Python script for automating install applications.
+- autoapp.toml: List of applications that need to be installed.
 
-- AutoGit
+## AutoGit
 
-  - autogit.py: Python script for automating batch manage git repositories.
-  - autogit.toml: List of git repositories.
+- autogit.py: Python script for automating batch manage git repositories.
+- autogit.toml: List of git repositories.
 
-- AutoPip
+## AutoPip
 
-  - autopip.py: Python script for automating install/upgrade packages.
-  - autopip.toml: Python third-party packages that need to be installed/upgraded.
+- autopip.py: Python script for automating install/upgrade packages.
+- autopip.toml: List of third-party packages that need to be installed/upgraded.

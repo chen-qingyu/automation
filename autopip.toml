@@ -1,4 +1,4 @@
-# Python third-party packages that need to be installed/upgraded.
+# List of third-party packages that need to be installed/upgraded.
 
 packages = [
     'numpy',

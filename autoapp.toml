@@ -1,4 +1,4 @@
-# Applications that need to be installed.
+# List of applications that need to be installed.
 #
 # name = the name of the application.
 # method = one of ['automatic', 'manual', 'winget'].
