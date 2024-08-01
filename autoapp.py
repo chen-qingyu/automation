@@ -22,7 +22,7 @@ def main():
 
     # parse command
     parser = argparse.ArgumentParser(prog="autoapp", description="Python3 script for automating install applications.")
-    parser.add_argument("command", type=str, help="command", choices=['install', 'search'])
+    parser.add_argument("command", type=str, help="command", choices=['install', 'check'])
     args = parser.parse_args()
 
     # read data
@@ -34,8 +34,8 @@ def main():
     match args.command:
         case 'install':
             install_app(apps)
-        case 'search':
-            search_app(apps)
+        case 'check':
+            check_app(apps)
 
 
 def install_app(apps: list[dict], download_dir: str = f'C:/Users/{os.getlogin()}/Downloads/'):
@@ -85,7 +85,7 @@ def install_app(apps: list[dict], download_dir: str = f'C:/Users/{os.getlogin()}
         print(COLOR_FINISH + f"Finish download/install {app['name']}.\n")
 
 
-def search_app(apps: list[dict]):
+def check_app(apps: list[dict]):
     """ Check which apps can be installed using winget now. """
 
     for app in apps:
