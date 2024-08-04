@@ -225,9 +225,9 @@ method = 'manual'
 site = 'https://github.com/x64dbg/x64dbg/releases'
 
 [[apps]]
-name = 'Komac'
+name = 'Windows Package Manager Manifest Creator'
 method = 'winget'
-id = 'RussellBanks.Komac'
+id = 'Microsoft.WingetCreate'
 
 [[apps]]
 name = 'GitHub CLI'
