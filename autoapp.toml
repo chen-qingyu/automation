@@ -366,6 +366,11 @@ name = 'TrafficMonitor'
 method = 'manual'
 site = 'https://github.com/zhongyang219/TrafficMonitor/releases'
 
+[[apps]]
+name = 'GifCam'
+method = 'manual'
+site = 'https://blog.bahraniapps.com/gifcam/'
+
 # Game
 
 [[apps]]
