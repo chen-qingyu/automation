@@ -18,7 +18,7 @@ packages = [
     # 'jieba',
 
     'requests',
-    'beautifulsoup4', # bs4
+    # 'beautifulsoup4', # bs4
 
     'opencv-python', # cv2, name conflicts with easyocr's dep: opencv-python-headless
     'torch',
@@ -35,7 +35,7 @@ packages = [
     'objprint',
     'viztracer',
 
-    'dashscope',
+    # 'dashscope',
 
-    'redis',
+    # 'redis',
 ]
