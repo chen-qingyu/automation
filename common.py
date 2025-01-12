@@ -10,7 +10,7 @@ if sys.version_info < (3, 12):
 try:
     import colorama
 except ModuleNotFoundError:
-    os.system('python -m pip install --upgrade pip colorama')
+    os.system('python -m pip install --upgrade -i https://mirrors.aliyun.com/pypi/simple/ pip colorama')
     os.system('python -m pip cache purge')
     import colorama
 
