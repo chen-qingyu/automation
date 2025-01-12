@@ -79,6 +79,11 @@ method = 'winget'
 id = 'CCL.NetLogo'
 
 [[apps]]
+name = 'PowerShell'
+method = 'winget'
+id = 'Microsoft.PowerShell'
+
+[[apps]]
 name = 'Prolog'
 method = 'winget'
 id = 'SWI-Prolog.SWI-Prolog'
