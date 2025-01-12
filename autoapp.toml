@@ -162,7 +162,7 @@ id = 'Unity.UnityHub'
 [[apps]]
 name = 'SQLiteStudio'
 method = 'winget'
-id = 'sqlitestudio.pl.SQLiteStudio'
+id = 'PawelSalawa.SQLiteStudio'
 
 [[apps]]
 name = 'Git'
