@@ -51,7 +51,7 @@ site = 'https://www.haskell.org/ghcup/'
 [[apps]]
 name = 'Java'
 method = 'winget'
-id = 'Oracle.JDK.21' # may need check the latest version
+id = 'Oracle.JDK.23' # may need check the latest version
 
 [[apps]]
 name = 'JavaScript'
