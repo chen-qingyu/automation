@@ -69,11 +69,6 @@ method = 'winget'
 id = 'GNU.Octave'
 
 [[apps]]
-name = 'Mathematica'
-method = 'winget'
-id = 'WolframResearch.WolframEngine'
-
-[[apps]]
 name = 'NetLogo'
 method = 'winget'
 id = 'CCL.NetLogo'
