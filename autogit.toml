@@ -5,81 +5,81 @@
 # upstream = the upstream remote repository host.
 
 [[repos]]
-path = 'F:/Automation'
+path = 'E:/Automation'
 remote = { github = 'https://github.com/chen-qingyu/Automation.git', gitee = 'https://gitee.com/ChobitsY/automation.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Projects/pyinrs'
+path = 'E:/Projects/pyinrs'
 remote = { github = 'https://github.com/chen-qingyu/pyinrs.git', gitee = 'https://gitee.com/ChobitsY/pyinrs.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Projects/pyincpp'
+path = 'E:/Projects/pyincpp'
 remote = { github = 'https://github.com/chen-qingyu/pyincpp.git', gitee = 'https://gitee.com/ChobitsY/pyincpp.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Projects/mymatrix'
+path = 'E:/Projects/mymatrix'
 remote = { github = 'https://github.com/chen-qingyu/mymatrix.git', gitee = 'https://gitee.com/ChobitsY/mymatrix.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Projects/hellods'
+path = 'E:/Projects/hellods'
 remote = { github = 'https://github.com/chen-qingyu/hellods.git', gitee = 'https://gitee.com/ChobitsY/hellods.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Projects/HelloWorld'
+path = 'E:/Projects/HelloWorld'
 remote = { github = 'https://github.com/chen-qingyu/HelloWorld.git', gitee = 'https://gitee.com/ChobitsY/HelloWorld.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Projects/BadApple'
+path = 'E:/Projects/BadApple'
 remote = { github = 'https://github.com/chen-qingyu/BadApple', gitee = 'https://gitee.com/ChobitsY/BadApple' }
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Projects/bf'
+path = 'E:/Projects/bf'
 remote = { github = 'https://github.com/chen-qingyu/bf', gitee = 'https://gitee.com/ChobitsY/bf' }
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Code/C'
+path = 'E:/Code/C'
 remote = { github = 'https://github.com/chen-qingyu/C-Code.git', gitee = 'https://gitee.com/ChobitsY/C-Code.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Code/Python'
+path = 'E:/Code/Python'
 remote = { github = 'https://github.com/chen-qingyu/Python-Code.git', gitee = 'https://gitee.com/ChobitsY/Python-Code.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Code/STM32'
+path = 'E:/Code/STM32'
 remote = { github = 'https://github.com/chen-qingyu/STM32-Code.git', gitee = 'https://gitee.com/ChobitsY/STM32-Code.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Code/TeX'
+path = 'E:/Code/TeX'
 remote = { github = 'https://github.com/chen-qingyu/TeX-Code.git', gitee = 'https://gitee.com/ChobitsY/TeX-Code.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Code/Typst'
+path = 'E:/Code/Typst'
 remote = { github = 'https://github.com/chen-qingyu/Typst-Code.git', gitee = 'https://gitee.com/ChobitsY/Typst-Code.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Learn/C Primer Plus'
+path = 'E:/Learn/C Primer Plus'
 remote = { github = 'https://github.com/chen-qingyu/C-Primer-Plus.git', gitee = 'https://gitee.com/ChobitsY/c-primer-plus.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Learn/OSTEP'
+path = 'E:/Learn/OSTEP'
 remote = { github = 'https://github.com/chen-qingyu/OSTEP.git', gitee = 'https://gitee.com/ChobitsY/ostep.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'F:/Learn/HtDP'
+path = 'E:/Learn/HtDP'
 remote = { github = 'https://github.com/chen-qingyu/HtDP.git', gitee = 'https://gitee.com/ChobitsY/htdp.git' }
 upstream = 'github'
