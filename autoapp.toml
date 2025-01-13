@@ -1,14 +1,11 @@
 # List of applications that need to be installed.
 #
 # name = the name of the application.
-# method = one of ['automatic', 'manual', 'winget'].
-# - automatic = automatically download and try automatic installation.
-#   - url = the URL download the file directly.
-#   - args = install arguments.
-# - manual = manual download and installation.
-#   - site = the download site at which the browser opens.
+# method = one of ['winget', 'manual'].
 # - winget = download and install using winget.
 #   - id = the ID of the application in winget.
+# - manual = manual download and installation.
+#   - url = the download url at which the browser opens.
 
 # Pre-requisites
 #   1. Python 3.12+
@@ -46,12 +43,12 @@ id = 'Erlang.ErlangOTP'
 [[apps]]
 name = 'Elixir'
 method = 'manual'
-site = 'https://elixir-lang.org/install.html#windows'
+url = 'https://elixir-lang.org/install.html#windows'
 
 [[apps]]
 name = 'Haskell'
 method = 'manual'
-site = 'https://www.haskell.org/ghcup/'
+url = 'https://www.haskell.org/ghcup/'
 
 [[apps]]
 name = 'Java'
@@ -152,9 +149,9 @@ id = 'JetBrains.Toolbox'
 
 [[apps]]
 name = 'Qt'
-method = 'automatic'
+method = 'manual'
 url = 'https://mirror.nju.edu.cn/qt/official_releases/online_installers/qt-unified-windows-x64-online.exe'
-args = '--mirror https://mirror.nju.edu.cn/qt'
+# args = '--mirror https://mirror.nju.edu.cn/qt'
 
 [[apps]]
 name = 'Unity Hub'
@@ -224,12 +221,12 @@ id = 'CoatiSoftware.Sourcetrail' # I issued
 [[apps]]
 name = 'UMLet'
 method = 'manual'
-site = 'https://www.umlet.com/changes.htm'
+url = 'https://www.umlet.com/changes.htm'
 
 [[apps]]
 name = 'x64dbg'
 method = 'manual'
-site = 'https://x64dbg.com'
+url = 'https://x64dbg.com'
 
 [[apps]]
 name = 'Windows Package Manager Manifest Creator'
@@ -254,7 +251,7 @@ id = 'AlDanial.Cloc'
 [[apps]]
 name = 'Golly'
 method = 'manual'
-site = 'https://sourceforge.net/projects/golly/files/'
+url = 'https://sourceforge.net/projects/golly/files/'
 
 # Tool
 
@@ -371,19 +368,19 @@ id = 'zhongyang219.TrafficMonitor.Lite'
 [[apps]]
 name = 'Snipaste'
 method = 'manual'
-site = 'https://www.snipaste.com/download.html'
+url = 'https://www.snipaste.com/download.html'
 
 [[apps]]
 name = 'EV录屏'
 method = 'manual'
-site = 'https://www.ieway.cn/evcapture.html'
+url = 'https://www.ieway.cn/evcapture.html'
 
 [[apps]]
 name = 'FreePiano'
 method = 'manual'
-site = 'https://freepiano.tiwb.com/cn/'
+url = 'https://freepiano.tiwb.com/cn/'
 
 [[apps]]
 name = 'GifCam'
 method = 'manual'
-site = 'https://blog.bahraniapps.com/gifcam/'
+url = 'https://blog.bahraniapps.com/gifcam/'

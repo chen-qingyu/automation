@@ -6,6 +6,7 @@
 
 import os
 import platform
+import subprocess
 import webbrowser
 import tomllib
 import argparse
@@ -22,7 +23,7 @@ def main():
 
     # parse command
     parser = argparse.ArgumentParser(prog="autoapp", description="Python3 script for automating install applications.")
-    parser.add_argument("command", type=str, help="command", choices=['install', 'check'])
+    parser.add_argument("command", type=str, help="command", choices=['install', 'update', 'check'])
     args = parser.parse_args()
 
     # read data
@@ -34,6 +35,8 @@ def main():
     match args.command:
         case 'install':
             install_app(apps)
+        case 'update':
+            update_app(apps)
         case 'check':
             check_app(apps)
 
@@ -57,42 +60,58 @@ def install_app(apps: list[dict], download_dir: str = f'C:/Users/{os.getlogin()}
         import tqdm
 
     for i, app in enumerate(apps, start=1):
-        print(COLOR_START + f"({i}/{len(apps)}) Start download/install {app['name']}...")
+        print(COLOR_START + f"({i}/{len(apps)}) Start install {app['name']}...")
 
         match app['method']:
-            case 'automatic':
-                file_name = app['url'].split('/')[-1]
-                if not os.path.exists(download_dir + file_name):
-                    response = requests.get(app['url'], stream=True)
-                    length = int(response.headers.get('content-length', 0))
-                    with open(download_dir + file_name, 'wb') as fo, tqdm.tqdm(desc=file_name, total=length, unit='iB', unit_scale=True, unit_divisor=1024) as bar:
-                        for data in response.iter_content(chunk_size=1024):
-                            size = fo.write(data)
-                            bar.update(size)
-                os.system(f'{download_dir + file_name} {app['args']}')
-                input(COLOR_INFO + "Wait for the installation to complete.")
+            case 'winget':
+                result = subprocess.run(['winget', 'list', app['id']], capture_output=True, text=True, encoding='utf-8')
+                if app['id'] in result.stdout:
+                    print(COLOR_INFO + f"{app['name']} is already installed.")
+                else:
+                    os.system(f'winget install --id {app['id']} --source winget')
 
             case 'manual':
-                webbrowser.open(app['site'])
-                input(COLOR_INFO + f"Please download and install {app['name']} manually.")
-
-            case 'winget':
-                os.system(f'winget install --id {app['id']} --source winget')
+                webbrowser.open(app['url'])
+                input(COLOR_INFO + f"Please install {app['name']} manually.")
 
             case _:
                 print(COLOR_ERROR + "Error: Wrong method.")
 
-        print(COLOR_FINISH + f"Finish download/install {app['name']}.\n")
+        print(COLOR_FINISH + f"Finish install {app['name']}.\n")
+
+
+def update_app(apps: list[dict]):
+    """ Update a list of applications using the `winget` package manager. """
+
+    for i, app in enumerate(apps, start=1):
+        print(COLOR_START + f"({i}/{len(apps)}) Start update {app['name']}...")
+
+        if app['method'] == 'winget':
+            os.system(f'winget upgrade --id {app['id']}')
+        else:
+            os.system(f'winget search "{app['name']}"')
+            input(COLOR_INFO + f"Please update {app['name']} manually.")
+
+        print(COLOR_FINISH + f"Finish update {app['name']}.\n")
 
 
 def check_app(apps: list[dict]):
-    """ Check which apps can be installed using winget now. """
+    """ Check if a list of applications are installed using the `winget` package manager. """
 
-    for app in apps:
-        if app['method'] != 'winget':
-            print(COLOR_INFO + f"{app['name']} [{app['method']}]")
+    for i, app in enumerate(apps, start=1):
+        print(COLOR_START + f"({i}/{len(apps)}) Start check {app['name']}...")
+
+        if app['method'] == 'winget':
+            result = subprocess.run(['winget', 'list', app['id']], capture_output=True, text=True, encoding='utf-8')
+            if app['id'] in result.stdout:
+                print(COLOR_INFO + f"{app['name']} is already installed.")
+            else:
+                print(COLOR_ERROR + f"{app['name']} is not installed.")
+        else:
             os.system(f'winget search "{app['name']}"')
-            print()
+            print(COLOR_INFO + f"Please check {app['name']} manually.")
+
+        print(COLOR_FINISH + f"Finish check {app['name']}.\n")
 
 
 if __name__ == '__main__':
