@@ -50,10 +50,10 @@ def process_command(command: str, apps: list[dict]):
                 if app['id'] in result.stdout:
                     print(COLOR_INFO + f"{app['name']} is already installed.")
                 else:
-                    os.system(f'winget install --id {app['id']} --source winget')
+                    os.system(f'winget install --exact --id {app['id']} --source winget')
 
             case ('update', 'winget'):
-                os.system(f'winget upgrade --id {app['id']}')
+                os.system(f'winget upgrade --exact --id {app['id']}')
 
             case ('install' | 'update', 'manual'):
                 webbrowser.open(app['url'])
