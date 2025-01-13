@@ -256,11 +256,6 @@ url = 'https://sourceforge.net/projects/golly/files/'
 # Tool
 
 [[apps]]
-name = 'Bandizip'
-method = 'winget'
-id = 'Bandisoft.Bandizip'
-
-[[apps]]
 name = 'Blender'
 method = 'winget'
 id = 'BlenderFoundation.Blender'
