@@ -7,15 +7,17 @@
 # - manual = manual download and installation.
 #   - url = the download url at which the browser opens.
 
+
 # Pre-requisites
 #   1. Python 3.12+
 #   2. Administrator privilege
 #   3. Check the latest version
 
-# Language
+
+### Language
 
 [[apps]]
-name = 'NASM'
+name = 'ASM'
 method = 'winget'
 id = 'NASM.NASM'
 
@@ -66,14 +68,14 @@ method = 'winget'
 id = 'DEVCOM.Lua'
 
 [[apps]]
-name = 'GNU Octave'
-method = 'winget'
-id = 'GNU.Octave'
-
-[[apps]]
 name = 'NetLogo'
 method = 'winget'
 id = 'CCL.NetLogo'
+
+[[apps]]
+name = 'Octave'
+method = 'winget'
+id = 'GNU.Octave'
 
 [[apps]]
 name = 'PowerShell'
@@ -86,14 +88,14 @@ method = 'winget'
 id = 'SWI-Prolog.SWI-Prolog'
 
 [[apps]]
-name = 'Ruby'
-method = 'winget'
-id = 'RubyInstallerTeam.RubyWithDevKit.3.2' # may need check the latest version
-
-[[apps]]
 name = 'Racket'
 method = 'winget'
 id = 'Racket.Racket'
+
+[[apps]]
+name = 'Ruby'
+method = 'winget'
+id = 'RubyInstallerTeam.RubyWithDevKit.3.2' # may need check the latest version
 
 [[apps]]
 name = 'Rust'
@@ -101,14 +103,14 @@ method = 'winget'
 id = 'Rustlang.Rustup'
 
 [[apps]]
-name = 'Standard ML'
-method = 'winget'
-id = 'SMLNJ.SMLNJ.Legacy' # I issued
-
-[[apps]]
 name = 'SQL'
 method = 'winget'
 id = 'SQLite.SQLite'
+
+[[apps]]
+name = 'Standard ML'
+method = 'winget'
+id = 'SMLNJ.SMLNJ.Legacy' # I issued
 
 [[apps]]
 name = 'TeX'
@@ -125,7 +127,8 @@ name = 'Verilog'
 method = 'winget'
 id = 'Icarus.Verilog' # I issued
 
-# Code
+
+### Code
 
 [[apps]]
 name = 'Sublime Text'
@@ -143,15 +146,15 @@ method = 'winget'
 id = 'Microsoft.VisualStudio.2022.Community' # may need check the latest version
 
 [[apps]]
-name = 'Toolbox App'
-method = 'winget'
-id = 'JetBrains.Toolbox'
-
-[[apps]]
 name = 'Qt'
 method = 'manual'
 url = 'https://mirror.nju.edu.cn/qt/official_releases/online_installers/qt-unified-windows-x64-online.exe'
 # args = '--mirror https://mirror.nju.edu.cn/qt'
+
+[[apps]]
+name = 'JetBrains Toolbox'
+method = 'winget'
+id = 'JetBrains.Toolbox'
 
 [[apps]]
 name = 'Unity Hub'
@@ -219,16 +222,6 @@ method = 'winget'
 id = 'CoatiSoftware.Sourcetrail' # I issued
 
 [[apps]]
-name = 'UMLet'
-method = 'manual'
-url = 'https://www.umlet.com/changes.htm'
-
-[[apps]]
-name = 'x64dbg'
-method = 'manual'
-url = 'https://x64dbg.com'
-
-[[apps]]
 name = 'Windows Package Manager Manifest Creator'
 method = 'winget'
 id = 'Microsoft.WingetCreate'
@@ -249,11 +242,17 @@ method = 'winget'
 id = 'AlDanial.Cloc'
 
 [[apps]]
-name = 'Golly'
+name = 'UMLet'
 method = 'manual'
-url = 'https://sourceforge.net/projects/golly/files/'
+url = 'https://www.umlet.com/changes.htm'
 
-# Tool
+[[apps]]
+name = 'x64dbg'
+method = 'manual'
+url = 'https://x64dbg.com'
+
+
+### Tool
 
 [[apps]]
 name = 'Blender'
@@ -291,11 +290,6 @@ method = 'winget'
 id = 'calibre.calibre'
 
 [[apps]]
-name = '网易云音乐'
-method = 'winget'
-id = 'NetEase.CloudMusic'
-
-[[apps]]
 name = 'Free Download Manager'
 method = 'winget'
 id = 'SoftDeluxe.FreeDownloadManager'
@@ -309,31 +303,6 @@ id = 'WinMerge.WinMerge'
 name = 'GeoGebra'
 method = 'winget'
 id = 'GeoGebra.Classic'
-
-[[apps]]
-name = '百度网盘'
-method = 'winget'
-id = 'Baidu.BaiduNetdisk'
-
-[[apps]]
-name = 'QQ'
-method = 'winget'
-id = 'Tencent.QQ'
-
-[[apps]]
-name = '微信'
-method = 'winget'
-id = 'Tencent.WeChat'
-
-[[apps]]
-name = '腾讯会议'
-method = 'winget'
-id = 'Tencent.TencentMeeting'
-
-[[apps]]
-name = 'RustDesk'
-method = 'winget'
-id = 'RustDesk.RustDesk'
 
 [[apps]]
 name = 'PotPlayer'
@@ -366,6 +335,11 @@ method = 'manual'
 url = 'https://www.snipaste.com/download.html'
 
 [[apps]]
+name = 'GifCam'
+method = 'manual'
+url = 'https://blog.bahraniapps.com/gifcam/'
+
+[[apps]]
 name = 'EV录屏'
 method = 'manual'
 url = 'https://www.ieway.cn/evcapture.html'
@@ -376,6 +350,42 @@ method = 'manual'
 url = 'https://freepiano.tiwb.com/cn/'
 
 [[apps]]
-name = 'GifCam'
+name = 'RustDesk'
+method = 'winget'
+id = 'RustDesk.RustDesk'
+
+[[apps]]
+name = '腾讯会议'
+method = 'winget'
+id = 'Tencent.TencentMeeting'
+
+[[apps]]
+name = '网易云音乐'
+method = 'winget'
+id = 'NetEase.CloudMusic'
+
+[[apps]]
+name = '百度网盘'
+method = 'winget'
+id = 'Baidu.BaiduNetdisk'
+
+
+### Social
+
+[[apps]]
+name = 'QQ'
+method = 'winget'
+id = 'Tencent.QQ'
+
+[[apps]]
+name = '微信'
+method = 'winget'
+id = 'Tencent.WeChat'
+
+
+### Game
+
+[[apps]]
+name = 'Golly'
 method = 'manual'
-url = 'https://blog.bahraniapps.com/gifcam/'
+url = 'https://sourceforge.net/projects/golly/files/'
