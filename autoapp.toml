@@ -10,7 +10,7 @@
 # - winget = download and install using winget.
 #   - id = the ID of the application in winget.
 
-# Code
+# Language
 
 [[apps]]
 name = 'NASM'
@@ -122,6 +122,8 @@ id = 'Typst.Typst'
 name = 'Verilog'
 method = 'winget'
 id = 'Icarus.Verilog' # I issued
+
+# Code
 
 [[apps]]
 name = 'Sublime Text'
@@ -243,6 +245,11 @@ id = 'JohnMacFarlane.Pandoc'
 name = 'Cloc'
 method = 'winget'
 id = 'AlDanial.Cloc'
+
+[[apps]]
+name = 'Golly'
+method = 'manual'
+site = 'https://sourceforge.net/projects/golly/files/'
 
 # Tool
 
@@ -375,45 +382,3 @@ site = 'https://freepiano.tiwb.com/cn/'
 name = 'GifCam'
 method = 'manual'
 site = 'https://blog.bahraniapps.com/gifcam/'
-
-# Game
-
-[[apps]]
-name = '仙剑奇侠传四'
-method = 'manual'
-site = 'http://pal4.roogames.com/pal4/download/'
-
-[[apps]]
-name = 'Golly'
-method = 'manual'
-site = 'https://sourceforge.net/projects/golly/files/'
-
-[[apps]]
-name = '孤独に効く百合'
-method = 'manual'
-site = 'https://store.steampowered.com/app/800120/Lonely_Yuri/'
-
-[[apps]]
-name = 'SpaceEngine'
-method = 'manual'
-site = 'https://store.steampowered.com/app/314650/SpaceEngine/'
-
-[[apps]]
-name = 'ENDER LILIES: Quietus of the Knights'
-method = 'manual'
-site = 'https://store.steampowered.com/app/1369630/ENDER_LILIES_Quietus_of_the_Knights/'
-
-[[apps]]
-name = 'Ballex'
-method = 'manual'
-site = 'https://store.steampowered.com/app/1114430/Ballex/'
-
-[[apps]]
-name = 'Dark Souls Ⅲ'
-method = 'manual'
-site = 'https://store.steampowered.com/app/374320/DARK_SOULS_III/'
-
-[[apps]]
-name = '0 A.D.'
-method = 'manual'
-site = 'https://play0ad.com/download/win/'
