@@ -28,7 +28,7 @@ def main():
 
     # parse command
     parser = argparse.ArgumentParser(prog="autoapp", description=help_text, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", type=str, help="command", choices=['install', 'update', 'check'])
+    parser.add_argument("command", type=str, choices=['install', 'update', 'check'])
     args = parser.parse_args()
 
     # read data

@@ -19,7 +19,7 @@ def main():
 
     # parse command
     parser = argparse.ArgumentParser(prog="autopip", description=help_text, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", type=str, help="command", choices=['install', 'clean'])
+    parser.add_argument("command", type=str, choices=['install', 'clean'])
     args = parser.parse_args()
 
     # read data

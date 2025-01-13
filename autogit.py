@@ -26,7 +26,7 @@ def main():
 
     # parse command
     parser = argparse.ArgumentParser(prog="autogit", description=help_text, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", type=str, help="Git command", choices=['status', 'clone', 'push', 'pull', 'clean', 'remote', 'gc'])
+    parser.add_argument("command", type=str, choices=['status', 'clone', 'push', 'pull', 'clean', 'remote', 'gc'])
     args = parser.parse_args()
 
     # read data
