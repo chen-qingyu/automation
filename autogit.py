@@ -40,14 +40,7 @@ def main():
 
 
 def process_command(repos: list[dict], command: str):
-    """
-    Takes a list of repositories and a command as input, and performs the specified command on each repository.
-
-    :param repos: a list of dictionaries. Each dictionary represents a repository.
-    :type repos: list[dict]
-    :param command: a string that represents the git action to be performed.
-    :type command: str
-    """
+    """ Takes repositories and command as input, and performs the command on each repository. """
 
     print(COLOR_START + f"Start {command}.")
 

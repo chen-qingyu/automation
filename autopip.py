@@ -12,11 +12,12 @@ from common import COLOR_START, COLOR_INFO, COLOR_FINISH, COLOR_ERROR
 
 
 def main():
-    # parse command
     help_text = """
-    install: installs or upgrades a list of packages using pip in Python.
-    clean:  cleans up all installed Python packages.
+    install: install or upgrade a list of packages using pip in Python.
+    clean:   clean up all installed Python packages.
     """
+
+    # parse command
     parser = argparse.ArgumentParser(prog="autopip", description=help_text, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("command", type=str, help="command", choices=['install', 'clean'])
     args = parser.parse_args()
@@ -35,12 +36,7 @@ def main():
 
 
 def install_pkg(pkgs: list[str]):
-    """
-    Installs or upgrades a list of packages using pip in Python.
-
-    :param pkgs: a list of package names that need to be installed or upgraded
-    :type pkgs: list[str]
-    """
+    """ Install or upgrade a list of packages using pip in Python. """
 
     print(COLOR_START + f"Start install/upgrade packages: {', '.join(pkgs)}")
     os.system('python -m pip install --upgrade -i https://mirrors.aliyun.com/pypi/simple/ pip')
@@ -50,9 +46,7 @@ def install_pkg(pkgs: list[str]):
 
 
 def clean_pkg():
-    """
-    Cleans up all installed Python packages.
-    """
+    """ Clean up all installed Python packages. """
 
     print(COLOR_START + f"Start clean packages.")
     os.system('python -m pip freeze > pkgs.txt')

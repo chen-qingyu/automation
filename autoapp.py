@@ -12,7 +12,6 @@ import tomllib
 import argparse
 
 from common import COLOR_START, COLOR_INFO, COLOR_FINISH, COLOR_ERROR
-from autopip import install_pkg
 
 
 def main():
@@ -41,23 +40,8 @@ def main():
             check_app(apps)
 
 
-def install_app(apps: list[dict], download_dir: str = f'C:/Users/{os.getlogin()}/Downloads/'):
-    """
-    Download and install a list of applications either automatically, manually, or using the `winget` package manager.
-
-    :param apps: a list of dictionaries, where each dictionary represents an app to be installed.
-    :type apps: list[dict]
-    :param download_dir: specifies the directory where the downloaded files will be saved.
-    :type download_dir: str (optional)
-    """
-
-    try:
-        import requests
-        import tqdm
-    except ModuleNotFoundError:
-        install_pkg(['requests', 'tqdm'])
-        import requests
-        import tqdm
+def install_app(apps: list[dict]):
+    """ Install applications using `winget` or manually. """
 
     for i, app in enumerate(apps, start=1):
         print(COLOR_START + f"({i}/{len(apps)}) Start install {app['name']}...")
@@ -81,7 +65,7 @@ def install_app(apps: list[dict], download_dir: str = f'C:/Users/{os.getlogin()}
 
 
 def update_app(apps: list[dict]):
-    """ Update a list of applications using the `winget` package manager. """
+    """ Update applications using `winget` or manually. """
 
     for i, app in enumerate(apps, start=1):
         print(COLOR_START + f"({i}/{len(apps)}) Start update {app['name']}...")
@@ -96,7 +80,7 @@ def update_app(apps: list[dict]):
 
 
 def check_app(apps: list[dict]):
-    """ Check if a list of applications are installed using the `winget` package manager. """
+    """ Check if applications are installed or available via `winget`. """
 
     for i, app in enumerate(apps, start=1):
         print(COLOR_START + f"({i}/{len(apps)}) Start check {app['name']}...")
