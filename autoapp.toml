@@ -352,6 +352,11 @@ method = 'winget'
 id = 'PortSwigger.BurpSuite.Community'
 
 [[apps]]
+name = 'TrafficMonitor'
+method = 'winget'
+id = 'zhongyang219.TrafficMonitor.Lite'
+
+[[apps]]
 name = 'Snipaste'
 method = 'manual'
 site = 'https://www.snipaste.com/download.html'
@@ -365,11 +370,6 @@ site = 'https://www.ieway.cn/evcapture.html'
 name = 'FreePiano'
 method = 'manual'
 site = 'https://freepiano.tiwb.com/cn/'
-
-[[apps]]
-name = 'TrafficMonitor'
-method = 'manual'
-site = 'https://github.com/zhongyang219/TrafficMonitor/releases'
 
 [[apps]]
 name = 'GifCam'
