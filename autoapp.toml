@@ -137,6 +137,11 @@ method = 'winget'
 id = 'SublimeHQ.SublimeText.4'
 
 [[apps]]
+name = 'MarkText'
+method = 'winget'
+id = 'MarkText.MarkText'
+
+[[apps]]
 name = 'Visual Studio Code'
 method = 'winget'
 id = 'Microsoft.VisualStudioCode'
@@ -216,6 +221,11 @@ id = 'MHNexus.HxD'
 name = 'Graphviz'
 method = 'winget'
 id = 'Graphviz.Graphviz'
+
+[[apps]]
+name = 'Logisim-evolution'
+method = 'winget'
+id = 'logisim-evolution.logisim-evolution'
 
 [[apps]]
 name = 'Sourcetrail'
@@ -329,6 +339,16 @@ id = 'PortSwigger.BurpSuite.Community'
 name = 'TrafficMonitor'
 method = 'winget'
 id = 'zhongyang219.TrafficMonitor.Lite'
+
+[[apps]]
+name = 'CrystalDiskInfo'
+method = 'winget'
+id = 'CrystalDewWorld.CrystalDiskInfo.AoiEdition'
+
+[[apps]]
+name = 'Fastfetch'
+method = 'winget'
+id = 'Fastfetch-cli.Fastfetch'
 
 [[apps]]
 name = 'Snipaste'
