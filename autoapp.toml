@@ -10,6 +10,10 @@
 # - winget = download and install using winget.
 #   - id = the ID of the application in winget.
 
+# Pre-requisites
+#   1. Python 3.12+
+#   2. Administrator privilege
+
 # Language
 
 [[apps]]
