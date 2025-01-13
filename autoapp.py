@@ -23,7 +23,7 @@ def main():
     help_text = """
     install: install applications using `winget` or manually.
     update:  update applications using `winget` or manually.
-    check:   check if applications are installed or available via `winget`.
+    check:   check if applications are available via `winget`.
     """
 
     # parse command
@@ -42,17 +42,15 @@ def main():
 
 def process_command(command: str, apps: list[dict]):
     for i, app in enumerate(apps, start=1):
-        print(COLOR_START + f"({i}/{len(apps)}) Start install {app['name']}...")
+        print(COLOR_START + f"({i}/{len(apps)}) Start {command} {app['name']}...")
 
         match (command, app['method']):
-            case ('install' | 'check', 'winget'):
+            case ('install', 'winget'):
                 result = subprocess.run(['winget', 'list', app['id']], capture_output=True, text=True, encoding='utf-8')
                 if app['id'] in result.stdout:
                     print(COLOR_INFO + f"{app['name']} is already installed.")
-                elif command == 'install':
+                else:
                     os.system(f'winget install --id {app['id']} --source winget')
-                elif command == 'check':
-                    print(COLOR_ERROR + f"{app['name']} is not installed.")
 
             case ('update', 'winget'):
                 os.system(f'winget upgrade --id {app['id']}')
@@ -61,9 +59,11 @@ def process_command(command: str, apps: list[dict]):
                 webbrowser.open(app['url'])
                 input(COLOR_INFO + f"Please {command} {app['name']} manually.")
 
+            case ('check', 'winget'):
+                continue
+
             case ('check', 'manual'):
                 os.system(f'winget search "{app['name']}"')
-                print(COLOR_INFO + f"Please check {app['name']} manually.")
 
             case _:
                 print(COLOR_ERROR + "Error: Wrong method.")
