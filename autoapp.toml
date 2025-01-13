@@ -224,7 +224,7 @@ site = 'https://www.umlet.com/changes.htm'
 [[apps]]
 name = 'x64dbg'
 method = 'manual'
-site = 'https://github.com/x64dbg/x64dbg/releases'
+site = 'https://x64dbg.com'
 
 [[apps]]
 name = 'Windows Package Manager Manifest Creator'
