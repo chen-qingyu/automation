@@ -20,8 +20,8 @@ packages = [
     'requests',
     # 'beautifulsoup4', # bs4
 
-    'opencv-python', # cv2, name conflicts with easyocr's dep: opencv-python-headless
-    'torch',
+    # 'opencv-python', # cv2, name conflicts with easyocr's dep: opencv-python-headless
+    # 'torch',
 
     'autopep8',
     'ipython',
