@@ -69,6 +69,11 @@ method = 'winget'
 id = 'DEVCOM.Lua'
 
 [[apps]]
+name = 'Maxima'
+method = 'winget'
+id = 'MaximaTeam.Maxima'
+
+[[apps]]
 name = 'NetLogo'
 method = 'winget'
 id = 'CCL.NetLogo'
