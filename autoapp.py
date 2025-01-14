@@ -60,6 +60,7 @@ def process_command(command: str, apps: list[dict]):
                 input(COLOR_INFO + f"Please {command} {app['name']} manually.")
 
             case ('check', 'winget'):
+                print(COLOR_INFO + f"{app['name']} is already in winget.")
                 continue
 
             case ('check', 'manual'):
