@@ -63,3 +63,28 @@ upstream = 'github'
 path = 'E:/Study/answer-htdp'
 remote = { github = 'https://github.com/chen-qingyu/answer-htdp.git', gitee = 'https://gitee.com/ChobitsY/answer-htdp.git' }
 upstream = 'github'
+
+[[repos]]
+path = 'E:/Project/hexo-markdown-image'
+remote = { github = 'https://github.com/chen-qingyu/hexo-markdown-image' }
+upstream = 'github'
+
+[[repos]]
+path = 'E:/Project/hexo-console-zhihu'
+remote = { github = 'https://github.com/chen-qingyu/hexo-console-zhihu.git' }
+upstream = 'github'
+
+[[repos]]
+path = 'E:/Project/hexo-theme-diaspora'
+remote = { github = 'https://github.com/chen-qingyu/hexo-theme-diaspora.git' }
+upstream = 'github'
+
+[[repos]]
+path = 'E:/Project/mathagape'
+remote = { gitee = 'https://gitee.com/ChobitsY/mathagape.git' }
+upstream = 'gitee'
+
+[[repos]]
+path = 'E:/Project/sand-box'
+remote = { gitee = 'https://gitee.com/ChobitsY/sand-box.git' }
+upstream = 'gitee'
