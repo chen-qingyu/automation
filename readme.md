@@ -14,5 +14,5 @@ Some convenient automation scripts written in Python.
 
 ## AutoPip
 
-- autopip.py: Python script for automating install/upgrade packages.
-- autopip.toml: List of third-party packages that need to be installed/upgraded.
+- autopip.py: Python script for automating install/upgrade Python's packages.
+- autopip.toml: List of Python's packages that need to be installed/upgraded.
