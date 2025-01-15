@@ -4,8 +4,8 @@ Some convenient automation scripts written in Python.
 
 ## AutoApp
 
-- autoapp.py: Python script for automating install applications.
-- autoapp.toml: List of applications that need to be installed.
+- autoapp.py: Python script for automating install/upgrade applications.
+- autoapp.toml: List of applications that need to be installed/upgraded.
 
 ## AutoGit
 
