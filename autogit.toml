@@ -10,6 +10,11 @@ remote = { github = 'https://github.com/chen-qingyu/automation.git', gitee = 'ht
 upstream = 'github'
 
 [[repos]]
+path = 'E:/Blog/myblog'
+remote = { github = 'https://github.com/chen-qingyu/chen-qingyu.github.io' }
+upstream = 'github'
+
+[[repos]]
 path = 'E:/Project/pyinrs'
 remote = { github = 'https://github.com/chen-qingyu/pyinrs.git', gitee = 'https://gitee.com/ChobitsY/pyinrs.git' }
 upstream = 'github'
