@@ -5,8 +5,8 @@
 # upstream = the upstream remote repository host.
 
 [[repos]]
-path = 'E:/Automation'
-remote = { github = 'https://github.com/chen-qingyu/Automation.git', gitee = 'https://gitee.com/ChobitsY/automation.git' }
+path = 'E:/Project/automation'
+remote = { github = 'https://github.com/chen-qingyu/automation.git', gitee = 'https://gitee.com/ChobitsY/automation.git' }
 upstream = 'github'
 
 [[repos]]
@@ -30,13 +30,13 @@ remote = { github = 'https://github.com/chen-qingyu/hellods.git', gitee = 'https
 upstream = 'github'
 
 [[repos]]
-path = 'E:/Project/HelloWorld'
-remote = { github = 'https://github.com/chen-qingyu/HelloWorld.git', gitee = 'https://gitee.com/ChobitsY/HelloWorld.git' }
+path = 'E:/Project/hello-world'
+remote = { github = 'https://github.com/chen-qingyu/hello-world.git', gitee = 'https://gitee.com/ChobitsY/hello-world.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'E:/Project/BadApple'
-remote = { github = 'https://github.com/chen-qingyu/BadApple', gitee = 'https://gitee.com/ChobitsY/BadApple' }
+path = 'E:/Project/bad-apple'
+remote = { github = 'https://github.com/chen-qingyu/bad-apple', gitee = 'https://gitee.com/ChobitsY/bad-apple' }
 upstream = 'github'
 
 [[repos]]
@@ -45,21 +45,21 @@ remote = { github = 'https://github.com/chen-qingyu/bf', gitee = 'https://gitee.
 upstream = 'github'
 
 [[repos]]
-path = 'E:/CodeBase'
-remote = { github = 'https://github.com/chen-qingyu/CodeBase.git', gitee = 'https://gitee.com/ChobitsY/code-base.git' }
+path = 'E:/Project/code-base'
+remote = { github = 'https://github.com/chen-qingyu/code-base.git', gitee = 'https://gitee.com/ChobitsY/code-base.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'E:/Exercise/C Primer Plus'
-remote = { github = 'https://github.com/chen-qingyu/C-Primer-Plus.git', gitee = 'https://gitee.com/ChobitsY/c-primer-plus.git' }
+path = 'E:/Study/answer-cprimerplus'
+remote = { github = 'https://github.com/chen-qingyu/answer-cprimerplus.git', gitee = 'https://gitee.com/ChobitsY/answer-cprimerplus.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'E:/Exercise/OSTEP'
-remote = { github = 'https://github.com/chen-qingyu/OSTEP.git', gitee = 'https://gitee.com/ChobitsY/ostep.git' }
+path = 'E:/Study/answer-ostep'
+remote = { github = 'https://github.com/chen-qingyu/answer-ostep.git', gitee = 'https://gitee.com/ChobitsY/answer-ostep.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'E:/Exercise/HtDP'
-remote = { github = 'https://github.com/chen-qingyu/HtDP.git', gitee = 'https://gitee.com/ChobitsY/htdp.git' }
+path = 'E:/Study/answer-htdp'
+remote = { github = 'https://github.com/chen-qingyu/answer-htdp.git', gitee = 'https://gitee.com/ChobitsY/answer-htdp.git' }
 upstream = 'github'
