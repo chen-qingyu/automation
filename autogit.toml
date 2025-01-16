@@ -85,6 +85,11 @@ remote = { github = 'https://github.com/chen-qingyu/hexo-theme-diaspora.git' }
 upstream = 'github'
 
 [[repos]]
+path = 'E:/Project/semmath'
+remote = { github = 'https://github.com/semmath/semmath.git' }
+upstream = 'github'
+
+[[repos]]
 path = 'E:/Project/mathagape'
 remote = { gitee = 'https://gitee.com/chobitsy/mathagape.git' }
 upstream = 'gitee'
