@@ -55,17 +55,17 @@ remote = { github = 'https://github.com/chen-qingyu/code-base.git', gitee = 'htt
 upstream = 'github'
 
 [[repos]]
-path = 'E:/Study/answer-cprimerplus'
+path = 'E:/Study/Answer C Primer Plus'
 remote = { github = 'https://github.com/chen-qingyu/answer-cprimerplus.git', gitee = 'https://gitee.com/chobitsy/answer-cprimerplus.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'E:/Study/answer-ostep'
+path = 'E:/Study/Answer OSTEP'
 remote = { github = 'https://github.com/chen-qingyu/answer-ostep.git', gitee = 'https://gitee.com/chobitsy/answer-ostep.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'E:/Study/answer-htdp'
+path = 'E:/Study/Answer HtDP'
 remote = { github = 'https://github.com/chen-qingyu/answer-htdp.git', gitee = 'https://gitee.com/chobitsy/answer-htdp.git' }
 upstream = 'github'
 
