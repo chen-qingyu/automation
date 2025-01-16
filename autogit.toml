@@ -6,7 +6,7 @@
 
 [[repos]]
 path = 'E:/Project/automation'
-remote = { github = 'https://github.com/chen-qingyu/automation.git', gitee = 'https://gitee.com/ChobitsY/automation.git' }
+remote = { github = 'https://github.com/chen-qingyu/automation.git', gitee = 'https://gitee.com/chobitsy/automation.git' }
 upstream = 'github'
 
 [[repos]]
@@ -16,57 +16,57 @@ upstream = 'github'
 
 [[repos]]
 path = 'E:/Project/pyinrs'
-remote = { github = 'https://github.com/chen-qingyu/pyinrs.git', gitee = 'https://gitee.com/ChobitsY/pyinrs.git' }
+remote = { github = 'https://github.com/chen-qingyu/pyinrs.git', gitee = 'https://gitee.com/chobitsy/pyinrs.git' }
 upstream = 'github'
 
 [[repos]]
 path = 'E:/Project/pyincpp'
-remote = { github = 'https://github.com/chen-qingyu/pyincpp.git', gitee = 'https://gitee.com/ChobitsY/pyincpp.git' }
+remote = { github = 'https://github.com/chen-qingyu/pyincpp.git', gitee = 'https://gitee.com/chobitsy/pyincpp.git' }
 upstream = 'github'
 
 [[repos]]
 path = 'E:/Project/mymatrix'
-remote = { github = 'https://github.com/chen-qingyu/mymatrix.git', gitee = 'https://gitee.com/ChobitsY/mymatrix.git' }
+remote = { github = 'https://github.com/chen-qingyu/mymatrix.git', gitee = 'https://gitee.com/chobitsy/mymatrix.git' }
 upstream = 'github'
 
 [[repos]]
 path = 'E:/Project/hellods'
-remote = { github = 'https://github.com/chen-qingyu/hellods.git', gitee = 'https://gitee.com/ChobitsY/hellods.git' }
+remote = { github = 'https://github.com/chen-qingyu/hellods.git', gitee = 'https://gitee.com/chobitsy/hellods.git' }
 upstream = 'github'
 
 [[repos]]
 path = 'E:/Project/hello-world'
-remote = { github = 'https://github.com/chen-qingyu/hello-world.git', gitee = 'https://gitee.com/ChobitsY/hello-world.git' }
+remote = { github = 'https://github.com/chen-qingyu/hello-world.git', gitee = 'https://gitee.com/chobitsy/hello-world.git' }
 upstream = 'github'
 
 [[repos]]
 path = 'E:/Project/bad-apple'
-remote = { github = 'https://github.com/chen-qingyu/bad-apple', gitee = 'https://gitee.com/ChobitsY/bad-apple' }
+remote = { github = 'https://github.com/chen-qingyu/bad-apple', gitee = 'https://gitee.com/chobitsy/bad-apple' }
 upstream = 'github'
 
 [[repos]]
 path = 'E:/Project/bf'
-remote = { github = 'https://github.com/chen-qingyu/bf', gitee = 'https://gitee.com/ChobitsY/bf' }
+remote = { github = 'https://github.com/chen-qingyu/bf', gitee = 'https://gitee.com/chobitsy/bf' }
 upstream = 'github'
 
 [[repos]]
 path = 'E:/Project/code-base'
-remote = { github = 'https://github.com/chen-qingyu/code-base.git', gitee = 'https://gitee.com/ChobitsY/code-base.git' }
+remote = { github = 'https://github.com/chen-qingyu/code-base.git', gitee = 'https://gitee.com/chobitsy/code-base.git' }
 upstream = 'github'
 
 [[repos]]
 path = 'E:/Study/answer-cprimerplus'
-remote = { github = 'https://github.com/chen-qingyu/answer-cprimerplus.git', gitee = 'https://gitee.com/ChobitsY/answer-cprimerplus.git' }
+remote = { github = 'https://github.com/chen-qingyu/answer-cprimerplus.git', gitee = 'https://gitee.com/chobitsy/answer-cprimerplus.git' }
 upstream = 'github'
 
 [[repos]]
 path = 'E:/Study/answer-ostep'
-remote = { github = 'https://github.com/chen-qingyu/answer-ostep.git', gitee = 'https://gitee.com/ChobitsY/answer-ostep.git' }
+remote = { github = 'https://github.com/chen-qingyu/answer-ostep.git', gitee = 'https://gitee.com/chobitsy/answer-ostep.git' }
 upstream = 'github'
 
 [[repos]]
 path = 'E:/Study/answer-htdp'
-remote = { github = 'https://github.com/chen-qingyu/answer-htdp.git', gitee = 'https://gitee.com/ChobitsY/answer-htdp.git' }
+remote = { github = 'https://github.com/chen-qingyu/answer-htdp.git', gitee = 'https://gitee.com/chobitsy/answer-htdp.git' }
 upstream = 'github'
 
 [[repos]]
@@ -86,10 +86,10 @@ upstream = 'github'
 
 [[repos]]
 path = 'E:/Project/mathagape'
-remote = { gitee = 'https://gitee.com/ChobitsY/mathagape.git' }
+remote = { gitee = 'https://gitee.com/chobitsy/mathagape.git' }
 upstream = 'gitee'
 
 [[repos]]
 path = 'E:/Project/sand-box'
-remote = { gitee = 'https://gitee.com/ChobitsY/sand-box.git' }
+remote = { gitee = 'https://gitee.com/chobitsy/sand-box.git' }
 upstream = 'gitee'
