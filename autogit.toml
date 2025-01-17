@@ -40,13 +40,13 @@ remote = { github = 'https://github.com/chen-qingyu/hello-world.git', gitee = 'h
 upstream = 'github'
 
 [[repos]]
-path = 'E:/Project/bad-apple'
-remote = { github = 'https://github.com/chen-qingyu/bad-apple', gitee = 'https://gitee.com/chobitsy/bad-apple' }
+path = 'E:/Project/bf'
+remote = { github = 'https://github.com/chen-qingyu/bf', gitee = 'https://gitee.com/chobitsy/bf' }
 upstream = 'github'
 
 [[repos]]
-path = 'E:/Project/bf'
-remote = { github = 'https://github.com/chen-qingyu/bf', gitee = 'https://gitee.com/chobitsy/bf' }
+path = 'E:/Project/bad-apple'
+remote = { github = 'https://github.com/chen-qingyu/bad-apple', gitee = 'https://gitee.com/chobitsy/bad-apple' }
 upstream = 'github'
 
 [[repos]]
