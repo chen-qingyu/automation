@@ -10,13 +10,8 @@ remote = { github = 'https://github.com/chen-qingyu/automation.git', gitee = 'ht
 upstream = 'github'
 
 [[repos]]
-path = 'E:/Blog/my-blog'
-remote = { github = 'https://github.com/chen-qingyu/chen-qingyu.github.io.git' }
-upstream = 'github'
-
-[[repos]]
-path = 'E:/Blog/her-blog'
-remote = { github = 'https://github.com/chen-qingyu/her-blog.git' }
+path = 'E:/Project/pyincpp'
+remote = { github = 'https://github.com/chen-qingyu/pyincpp.git', gitee = 'https://gitee.com/chobitsy/pyincpp.git' }
 upstream = 'github'
 
 [[repos]]
@@ -25,8 +20,8 @@ remote = { github = 'https://github.com/chen-qingyu/pyinrs.git', gitee = 'https:
 upstream = 'github'
 
 [[repos]]
-path = 'E:/Project/pyincpp'
-remote = { github = 'https://github.com/chen-qingyu/pyincpp.git', gitee = 'https://gitee.com/chobitsy/pyincpp.git' }
+path = 'E:/Project/hellods'
+remote = { github = 'https://github.com/chen-qingyu/hellods.git', gitee = 'https://gitee.com/chobitsy/hellods.git' }
 upstream = 'github'
 
 [[repos]]
@@ -35,8 +30,8 @@ remote = { github = 'https://github.com/chen-qingyu/mymatrix.git', gitee = 'http
 upstream = 'github'
 
 [[repos]]
-path = 'E:/Project/hellods'
-remote = { github = 'https://github.com/chen-qingyu/hellods.git', gitee = 'https://gitee.com/chobitsy/hellods.git' }
+path = 'E:/Project/code-base'
+remote = { github = 'https://github.com/chen-qingyu/code-base.git', gitee = 'https://gitee.com/chobitsy/code-base.git' }
 upstream = 'github'
 
 [[repos]]
@@ -55,8 +50,13 @@ remote = { github = 'https://github.com/chen-qingyu/bf', gitee = 'https://gitee.
 upstream = 'github'
 
 [[repos]]
-path = 'E:/Project/code-base'
-remote = { github = 'https://github.com/chen-qingyu/code-base.git', gitee = 'https://gitee.com/chobitsy/code-base.git' }
+path = 'E:/Blog/my-blog'
+remote = { github = 'https://github.com/chen-qingyu/chen-qingyu.github.io.git' }
+upstream = 'github'
+
+[[repos]]
+path = 'E:/Blog/her-blog'
+remote = { github = 'https://github.com/chen-qingyu/her-blog.git' }
 upstream = 'github'
 
 [[repos]]
