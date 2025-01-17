@@ -39,9 +39,9 @@ def install_pkg(pkgs: list[str]):
     """ Install or upgrade a list of packages using pip in Python. """
 
     print(COLOR_START + f"Start install/upgrade packages: {', '.join(pkgs)}")
-    os.system('python -m pip install --upgrade -i https://mirrors.aliyun.com/pypi/simple/ pip')
-    os.system(f'python -m pip install --upgrade -i https://mirrors.aliyun.com/pypi/simple/ {' '.join(pkgs)}')
-    os.system('python -m pip cache purge')
+    os.system('py -m pip install --upgrade -i https://mirrors.aliyun.com/pypi/simple/ pip')
+    os.system(f'py -m pip install --upgrade -i https://mirrors.aliyun.com/pypi/simple/ {' '.join(pkgs)}')
+    os.system('py -m pip cache purge')
     print(COLOR_FINISH + f"Finish install/upgrade packages: {', '.join(pkgs)}")
 
 
@@ -49,8 +49,8 @@ def clean_pkg():
     """ Clean up all installed Python packages. """
 
     print(COLOR_START + f"Start clean packages.")
-    os.system('python -m pip freeze > pkgs.txt')
-    os.system('python -m pip uninstall --requirement pkgs.txt --yes')
+    os.system('py -m pip freeze > pkgs.txt')
+    os.system('py -m pip uninstall --requirement pkgs.txt --yes')
     os.remove('pkgs.txt')
     print(COLOR_FINISH + f"Finish clean packages.")
 
