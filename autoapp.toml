@@ -301,11 +301,6 @@ method = 'winget'
 id = 'qBittorrent.qBittorrent'
 
 [[apps]]
-name = 'calibre'
-method = 'winget'
-id = 'calibre.calibre'
-
-[[apps]]
 name = 'Free Download Manager'
 method = 'winget'
 id = 'SoftDeluxe.FreeDownloadManager'
