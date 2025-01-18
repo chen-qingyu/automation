@@ -276,11 +276,6 @@ method = 'winget'
 id = 'BlenderFoundation.Blender'
 
 [[apps]]
-name = 'CCleaner'
-method = 'winget'
-id = 'Piriform.CCleaner'
-
-[[apps]]
 name = 'Recuva'
 method = 'winget'
 id = 'Piriform.Recuva'
