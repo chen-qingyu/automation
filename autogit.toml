@@ -55,11 +55,6 @@ remote = { github = 'https://github.com/chen-qingyu/chen-qingyu.github.io.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'E:/Blog/her-blog'
-remote = { github = 'https://github.com/chen-qingyu/her-blog.git' }
-upstream = 'github'
-
-[[repos]]
 path = 'E:/Study/Answer C Primer Plus'
 remote = { github = 'https://github.com/chen-qingyu/answer-cprimerplus.git', gitee = 'https://gitee.com/chobitsy/answer-cprimerplus.git' }
 upstream = 'github'
