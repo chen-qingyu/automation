@@ -271,6 +271,11 @@ method = 'winget'
 id = 'BlenderFoundation.Blender'
 
 [[apps]]
+name = 'Bandizip'
+method = 'winget'
+id = 'Bandisoft.Bandizip'
+
+[[apps]]
 name = 'Recuva'
 method = 'winget'
 id = 'Piriform.Recuva'
