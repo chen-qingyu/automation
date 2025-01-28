@@ -18,16 +18,11 @@
 ### Language
 
 [[apps]]
-name = 'ASM'
-method = 'winget'
-id = 'NASM.NASM'
-
-[[apps]]
 name = 'BF'
 method = 'winget'
 id = 'ChenQingYu.BF' # I contributed
 
-# Include GNU Compiler Collection
+# Include GNU Compiler Collection and NASM
 [[apps]]
 name = 'Perl'
 method = 'winget'
