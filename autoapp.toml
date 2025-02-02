@@ -371,6 +371,11 @@ method = 'winget'
 id = 'RustDesk.RustDesk'
 
 [[apps]]
+name = 'Dependencies'
+method = 'winget'
+id = 'lucasg.Dependencies'
+
+[[apps]]
 name = '腾讯会议'
 method = 'winget'
 id = 'Tencent.TencentMeeting'
