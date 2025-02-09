@@ -41,22 +41,22 @@ upstream = 'github'
 
 [[repos]]
 path = 'E:/Project/bf'
-remote = { github = 'https://github.com/chen-qingyu/bf', gitee = 'https://gitee.com/chobity/bf' }
+remote = { github = 'https://github.com/chen-qingyu/bf.git', gitee = 'https://gitee.com/chobity/bf.git' }
 upstream = 'github'
 
 [[repos]]
 path = 'E:/Project/flags'
-remote = { github = 'https://github.com/chen-qingyu/flags' }
+remote = { github = 'https://github.com/chen-qingyu/flags.git' }
 upstream = 'github'
 
 [[repos]]
-path = 'E:/Project/greek-char'
-remote = { github = 'https://github.com/chen-qingyu/greek-char' }
+path = 'E:/Project/charmap'
+remote = { github = 'https://github.com/chen-qingyu/charmap.git' }
 upstream = 'github'
 
 [[repos]]
 path = 'E:/Project/bad-apple'
-remote = { github = 'https://github.com/chen-qingyu/bad-apple', gitee = 'https://gitee.com/chobity/bad-apple' }
+remote = { github = 'https://github.com/chen-qingyu/bad-apple.git', gitee = 'https://gitee.com/chobity/bad-apple.git' }
 upstream = 'github'
 
 [[repos]]
@@ -81,7 +81,7 @@ upstream = 'github'
 
 [[repos]]
 path = 'E:/Project/hexo-markdown-image'
-remote = { github = 'https://github.com/chen-qingyu/hexo-markdown-image' }
+remote = { github = 'https://github.com/chen-qingyu/hexo-markdown-image.git' }
 upstream = 'github'
 
 [[repos]]
