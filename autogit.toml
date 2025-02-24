@@ -5,7 +5,7 @@
 # upstream = the upstream remote repository host.
 
 [[repos]]
-path = 'E:/Project/automation'
+path = 'E:/Automation'
 remote = { github = 'https://github.com/chen-qingyu/automation.git', gitee = 'https://gitee.com/chobity/automation.git' }
 upstream = 'github'
 
@@ -60,7 +60,7 @@ remote = { github = 'https://github.com/chen-qingyu/bad-apple.git', gitee = 'htt
 upstream = 'github'
 
 [[repos]]
-path = 'E:/Blog/my-blog'
+path = 'E:/Blog'
 remote = { github = 'https://github.com/chen-qingyu/chen-qingyu.github.io.git' }
 upstream = 'github'
 
