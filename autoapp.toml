@@ -82,6 +82,7 @@ id = 'GNU.Octave'
 name = 'PowerShell'
 method = 'winget'
 id = 'Microsoft.PowerShell'
+# Theme: https://github.com/JanDeDobbeleer/oh-my-posh/discussions/6219
 
 [[apps]]
 name = 'Prolog'
