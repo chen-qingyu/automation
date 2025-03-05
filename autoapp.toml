@@ -82,7 +82,6 @@ id = 'GNU.Octave'
 name = 'PowerShell'
 method = 'winget'
 id = 'Microsoft.PowerShell'
-# Theme: https://github.com/JanDeDobbeleer/oh-my-posh/discussions/6219
 
 [[apps]]
 name = 'Prolog'
@@ -156,7 +155,7 @@ id = 'Microsoft.VisualStudio.2022.Community' # may need check the latest version
 name = 'Qt'
 method = 'manual'
 url = 'https://mirror.nju.edu.cn/qt/official_releases/online_installers/qt-unified-windows-x64-online.exe'
-# args = '--mirror https://mirror.nju.edu.cn/qt'
+# Mirror: '--mirror https://mirror.nju.edu.cn/qt'
 
 [[apps]]
 name = 'JetBrains Toolbox'
@@ -192,6 +191,7 @@ id = 'DimitriVanHeesch.Doxygen'
 name = 'Oh My Posh'
 method = 'winget'
 id = 'JanDeDobbeleer.OhMyPosh'
+# Theme: https://github.com/JanDeDobbeleer/oh-my-posh/discussions/6219
 
 [[apps]]
 name = 'Dr. Memory'
