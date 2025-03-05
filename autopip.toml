@@ -4,6 +4,7 @@ packages = [
     'numpy',
     'scipy',
     'sympy',
+    'simpy',
 
     'matplotlib',
     'pillow',     # PIL
