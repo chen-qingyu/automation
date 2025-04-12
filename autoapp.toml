@@ -267,6 +267,11 @@ url = 'https://x64dbg.com'
 ### Tool
 
 [[apps]]
+name = 'CPU-Z'
+method = 'winget'
+id = 'CPUID.CPU-Z'
+
+[[apps]]
 name = 'Blender'
 method = 'winget'
 id = 'BlenderFoundation.Blender'
