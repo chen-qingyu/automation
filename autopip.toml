@@ -2,6 +2,7 @@
 
 packages = [
     'uv',
+    'ruff',
     'ipython',
     'jupyter',
     'autopep8',
