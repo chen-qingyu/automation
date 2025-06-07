@@ -2,7 +2,7 @@
 # Brief: Python script for automating batch manage git repositories.
 # Author: 青羽 (chen_qingyu@qq.com, https://chen-qingyu.github.io/)
 # CreateDate: 2022.02.11
-# Copyright (C) 2022 - 2023
+# Copyright (C) 2022-2025
 
 import os
 import tomllib
