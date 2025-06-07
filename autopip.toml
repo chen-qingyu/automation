@@ -1,42 +1,22 @@
 # List of third-party packages that need to be installed/upgraded.
 
 packages = [
+    'ipython',
+    'jupyter',
+    'autopep8',
+    'pyinstaller',
+
     'numpy',
     'scipy',
     'sympy',
-    'simpy',
 
-    'matplotlib',
-    'pillow',     # PIL
-    # 'jupyter',
-
-    'pyinstaller',
-    'pygame',
-    'pyautogui',
-    'pyserial',    # serial
-
-    # 'wordcloud',
-    # 'jieba',
-
-    'requests',
-    # 'beautifulsoup4', # bs4
-
-    # 'opencv-python', # cv2, name conflicts with easyocr's dep: opencv-python-headless
-    # 'torch',
-
-    'autopep8',
-    'ipython',
-
-    'colorama',
     'tqdm',
+    'colorama',
+    'requests',
+    'matplotlib',
 
-    'PySide6',
-
-    'graph-tools',
     'objprint',
     'viztracer',
-
     'dashscope',
-
-    # 'redis',
+    'graph-tools',
 ]
