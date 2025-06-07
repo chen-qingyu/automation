@@ -8,7 +8,7 @@ import os
 import tomllib
 import argparse
 
-from common import COLOR_START, COLOR_INFO, COLOR_FINISH, COLOR_ERROR
+from common import COLOR_START, COLOR_FINISH
 
 
 def main():
@@ -48,11 +48,11 @@ def install_pkg(pkgs: list[str]):
 def clean_pkg():
     """ Clean up all installed Python packages. """
 
-    print(COLOR_START + f"Start clean packages.")
+    print(COLOR_START + "Start clean packages.")
     os.system('py -m pip freeze > pkgs.txt')
     os.system('py -m pip uninstall --requirement pkgs.txt --yes')
     os.remove('pkgs.txt')
-    print(COLOR_FINISH + f"Finish clean packages.")
+    print(COLOR_FINISH + "Finish clean packages.")
 
 
 if __name__ == '__main__':
