@@ -1,6 +1,7 @@
 # List of third-party packages that need to be installed/upgraded.
 
 packages = [
+    'uv',
     'ipython',
     'jupyter',
     'autopep8',
@@ -9,6 +10,7 @@ packages = [
     'numpy',
     'scipy',
     'sympy',
+    'pandas',
 
     'tqdm',
     'colorama',
