@@ -60,6 +60,11 @@ remote = { github = 'https://github.com/chen-qingyu/bad-apple.git', gitee = 'htt
 upstream = 'github'
 
 [[repos]]
+path = 'E:/Project/3dbp'
+remote = { github = 'https://github.com/chen-qingyu/3dbp.git' }
+upstream = 'github'
+
+[[repos]]
 path = 'E:/Blog'
 remote = { github = 'https://github.com/chen-qingyu/chen-qingyu.github.io.git' }
 upstream = 'github'
