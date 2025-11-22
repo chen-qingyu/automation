@@ -17,6 +17,7 @@ packages = [
     'colorama',
     'requests',
     'matplotlib',
+    'plotly',
 
     'objprint',
     'viztracer',
