@@ -1,6 +1,6 @@
 import os
 
-os.system('pip install --upgrade pip')
-os.system('pip install --upgrade uv ruff')
+os.system('py -m pip install --upgrade pip -i https://mirrors.aliyun.com/pypi/simple/')
+os.system('pip install --upgrade uv ruff -i https://mirrors.aliyun.com/pypi/simple/')
 os.system('xmake update')
 os.system('rustup update')
