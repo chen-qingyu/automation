@@ -8,19 +8,16 @@ packages = [
     'autopep8',
     'pyinstaller',
 
-    'numpy',
+    'polars',
     'scipy',
     'sympy',
-    'pandas',
 
     'tqdm',
     'colorama',
     'requests',
-    'matplotlib',
     'plotly',
 
     'objprint',
     'viztracer',
-    'dashscope',
     'graph-tools',
 ]
