@@ -3,10 +3,8 @@
 packages = [
     'uv',
     'ruff',
-    'ipython',
     'jupyter',
     'autopep8',
-    'pyinstaller',
 
     'polars',
     'scipy',
